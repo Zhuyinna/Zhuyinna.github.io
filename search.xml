@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>Hexo Tutoriol</title>
-    <url>//source/2024/03/23/Hexo-Tutoriol/</url>
+    <url>/2024/03/23/Hexo-Tutoriol/</url>
     <content><![CDATA[<h1 id="1"><a href="#1" class="headerlink" title="1"></a>1</h1><h2 id="head"><a href="#head" class="headerlink" title="head"></a>head</h2><p>hexo new post “article title”<br>编写完markdown文件后，根目录下输入hexo g生成静态网页，然后输入hexo s可以本地预览效果，最后输入hexo d上传到github上。这时打开你的github.io主页就能看到发布的文章啦   </p>
 <p>搜索没有内容：<br>当我一开始安装配置完成之后，我发现 Algolia 上面没有上传我的内容，也就无法搜索到。原因其实很简单，但很容易被忽略：<br>就是你需要先执行一次 hexo clean 清除一次缓存，然后再进行 hexo algolia hexo g 操作就可以了</p>
 ]]></content>
@@ -16,13 +16,13 @@
   </entry>
   <entry>
     <title>first article</title>
-    <url>//source/2024/03/23/first-article/</url>
+    <url>/2024/03/23/first-article/</url>
     <content><![CDATA[<p>hello, this is my first article.</p>
 ]]></content>
   </entry>
   <entry>
     <title>第二篇博客</title>
-    <url>//source/2024/03/23/%E7%AC%AC%E4%BA%8C%E7%AF%87%E5%8D%9A%E5%AE%A2/</url>
+    <url>/2024/03/23/%E7%AC%AC%E4%BA%8C%E7%AF%87%E5%8D%9A%E5%AE%A2/</url>
     <content><![CDATA[]]></content>
       <categories>
         <category>Tutorial</category>
