@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>hexo基本语法</title>
+    <url>/2024/03/23/hexo%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</url>
+    <content><![CDATA[<span id="more"></span>
+
+<h1 id="1-hexo命令"><a href="#1-hexo命令" class="headerlink" title="1. hexo命令"></a>1. hexo命令</h1><h2 id="1-1-创建新layout"><a href="#1-1-创建新layout" class="headerlink" title="1.1 创建新layout"></a>1.1 创建新layout</h2><p><code>hexo new [不填|post|page|draft] &quot;文章标题&quot;</code></p>
+<ol>
+<li><p>post<br>下面的234都可以通过meta信息指定<br>(1) 指定位置：<code>hexo new post &quot;文章标题&quot; /subdir/subdir/</code><br>(2) 指定分类：<code>hexo new post &quot;文章标题&quot; --category &quot;分类名称&quot;</code><br>(3) 指定标签：<code>hexo new post &quot;文章标题&quot; --tags &quot;标签1 标签2&quot;</code><br>(4) 指定布局：<code>hexo new post &quot;文章标题&quot; --layout &quot;布局名称&quot;</code></p>
+</li>
+<li><p>draft<br>TODO: to fill …</p>
+</li>
+<li><p>page<br>TODO: to fill …</p>
+</li>
+</ol>
+<h2 id="1-2-生成静态文件并部署到GitHub-Pages"><a href="#1-2-生成静态文件并部署到GitHub-Pages" class="headerlink" title="1.2 生成静态文件并部署到GitHub Pages"></a>1.2 生成静态文件并部署到GitHub Pages</h2><p><code>hexo d -g</code></p>
+<center>Continually Updated ...</center>
+]]></content>
+      <categories>
+        <category>Tutoriol</category>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>LUT</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>hexo环境配置</title>
     <url>/2024/03/23/hexo%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</url>
     <content><![CDATA[<span id="more"></span>
@@ -64,30 +89,5 @@
         <category>Tutoriol</category>
         <category>Hexo</category>
       </categories>
-  </entry>
-  <entry>
-    <title>hexo基本语法</title>
-    <url>/2024/03/23/hexo%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</url>
-    <content><![CDATA[<span id="more"></span>
-
-<h1 id="1-hexo命令"><a href="#1-hexo命令" class="headerlink" title="1. hexo命令"></a>1. hexo命令</h1><h2 id="1-1-创建新layout"><a href="#1-1-创建新layout" class="headerlink" title="1.1 创建新layout"></a>1.1 创建新layout</h2><p><code>hexo new [不填|post|page|draft] &quot;文章标题&quot;</code></p>
-<ol>
-<li><p>post<br>下面的234都可以通过meta信息指定<br>(1) 指定位置：<code>hexo new post &quot;文章标题&quot; /subdir/subdir/</code><br>(2) 指定分类：<code>hexo new post &quot;文章标题&quot; --category &quot;分类名称&quot;</code><br>(3) 指定标签：<code>hexo new post &quot;文章标题&quot; --tags &quot;标签1 标签2&quot;</code><br>(4) 指定布局：<code>hexo new post &quot;文章标题&quot; --layout &quot;布局名称&quot;</code></p>
-</li>
-<li><p>draft<br>TODO: to fill …</p>
-</li>
-<li><p>page<br>TODO: to fill …</p>
-</li>
-</ol>
-<h2 id="1-2-生成静态文件并部署到GitHub-Pages"><a href="#1-2-生成静态文件并部署到GitHub-Pages" class="headerlink" title="1.2 生成静态文件并部署到GitHub Pages"></a>1.2 生成静态文件并部署到GitHub Pages</h2><p><code>hexo d -g</code></p>
-<center>Continually Updated ...</center>
-]]></content>
-      <categories>
-        <category>Tutoriol</category>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>LUT</tag>
-      </tags>
   </entry>
 </search>
