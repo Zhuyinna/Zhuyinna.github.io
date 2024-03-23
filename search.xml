@@ -18,7 +18,7 @@
 <p>ps: 如果端口占用，可以使用<code>hexo server -p ****</code>指定端口，****为端口号，例如<code>hexo server -p 4000</code></p>
 <p>以上能够完成本地预览，但是还没有同步到github上，接下来就是部署到GitHub Pages</p>
 <h1 id="2-GitHub-Pages部署方法1-Deploy-From-a-Branch"><a href="#2-GitHub-Pages部署方法1-Deploy-From-a-Branch" class="headerlink" title="2. GitHub Pages部署方法1 - Deploy From a Branch"></a>2. GitHub Pages部署方法1 - Deploy From a Branch</h1><h2 id="2-1-创建仓库"><a href="#2-1-创建仓库" class="headerlink" title="2.1 创建仓库"></a>2.1 创建仓库</h2><p>新建一个仓库，仓库名为<code>用户名.github.io</code>，仓库名和用户名一致!</p>
-<h2 id="2-2-部署"><a href="#2-2-部署" class="headerlink" title="2.2 部署"></a>2.2 部署</h2><h2 id="2-2-1-本地和远程仓库关联"><a href="#2-2-1-本地和远程仓库关联" class="headerlink" title="2.2.1 本地和远程仓库关联"></a>2.2.1 本地和远程仓库关联</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git init</span><br><span class="line">git remote add origin &lt;url&gt;  <span class="comment"># url为仓库地址,例如 git@github.com:&lt;name&gt;/&lt;name&gt;.github.io.git</span></span><br></pre></td></tr></table></figure>
+<h2 id="2-2-部署"><a href="#2-2-部署" class="headerlink" title="2.2 部署"></a>2.2 部署</h2><h3 id="2-2-1-本地和远程仓库关联"><a href="#2-2-1-本地和远程仓库关联" class="headerlink" title="2.2.1 本地和远程仓库关联"></a>2.2.1 本地和远程仓库关联</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git init</span><br><span class="line">git remote add origin &lt;url&gt;  <span class="comment"># url为仓库地址,例如 git@github.com:&lt;name&gt;/&lt;name&gt;.github.io.git</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="2-2-2-安装插件"><a href="#2-2-2-安装插件" class="headerlink" title="2.2.2 安装插件"></a>2.2.2 安装插件</h3><p><code>npm install hexo-deployer-git --save</code></p>
 <h3 id="2-2-3-配置"><a href="#2-2-3-配置" class="headerlink" title="2.2.3 配置"></a>2.2.3 配置</h3><p>修改_config.yml文件</p>
@@ -32,9 +32,13 @@
 <li><p>new后自动打开<br>新建scripts文件夹，新建一个<code>auto_open.js</code>文件，内容如下<br>这里path&#x2F;to&#x2F;your&#x2F;ide是你的编辑器的路径，例如<code>&quot;C:/Program Files/Notepad++/notepad++.exe&quot;</code></p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> spawn = <span class="built_in">require</span>(<span class="string">&#x27;child_process&#x27;</span>).<span class="property">exec</span>;</span><br><span class="line">hexo.<span class="title function_">on</span>(<span class="string">&#x27;new&#x27;</span>, <span class="keyword">function</span>(<span class="params">data</span>)&#123;</span><br><span class="line">    <span class="title function_">spawn</span>(<span class="string">&#x27;start  &quot;path/to/your/ide&quot; &#x27;</span> + data.<span class="property">path</span>);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>图片上传<br>默认是不上传图片的，可以安装插件<code>hexo-asset-image</code>来支持<br><code>npm install hexo-asset-image --save</code><br>在_config.yml中修改 <code>post_asset_folder: true</code></p>
+<li><p>图片上传</p>
 </li>
 </ol>
+<ul>
+<li>网上查的方法，但是对我没用<br>默认是不上传图片的，可以安装插件<code>hexo-asset-image</code>来支持<br><code>npm install hexo-asset-image --save</code><br>在_config.yml中修改 <code>post_asset_folder: true</code></li>
+<li>图床<br>PicGO+SM.MS<br>想用github，但是上传失败，SM.MS免费又方便又快捷，强烈推荐，只要注册就有一个token，直接粘贴到PicGO中即可<br>具体使用方法：本地截图之后，复制到剪贴板，通过快捷键(一般是Alt+D)上传，上传成功后会自动复制图片链接，直接粘贴到markdown文件中即可，非常方便</li>
+</ul>
 <h1 id="3-Github-Pages部署方法2-WorkFlow"><a href="#3-Github-Pages部署方法2-WorkFlow" class="headerlink" title="3. Github Pages部署方法2 - WorkFlow"></a>3. Github Pages部署方法2 - WorkFlow</h1><p>一种看起来非常高大上牛逼的方法，但也是真的很麻烦，翻阅博客无数，最后error和warning也无数，放弃。看在自己差点通了个宵的份上，还是记录一下。</p>
 <h2 id="3-1-创建密钥"><a href="#3-1-创建密钥" class="headerlink" title="3.1 创建密钥"></a>3.1 创建密钥</h2><ol>
 <li><p>首先根据<a href="https://docs.github.com/en/developers/overview/managing-deploy-keys#deploy-keys">这篇文章</a>生成ssh密钥对</p>
@@ -44,7 +48,7 @@
 <li><p>在仓库的settings，找到Deploy keys，点击Add deploy key，将公钥粘贴进去，勾选Allow write access</p>
 </li>
 </ol>
-<p><img src="/.io//hexo%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/Snipaste_2024-03-23_15-15-22.png" alt="alt text"></p>
+<p><img src="https://s2.loli.net/2024/03/23/5ELY6H4v9lrCS7D.png"></p>
 <h2 id="3-2-创建workflow"><a href="#3-2-创建workflow" class="headerlink" title="3.2 创建workflow"></a>3.2 创建workflow</h2><p>在仓库的<code>.github/workflows</code>目录下创建一个<code>deploy.yml</code>文件，内容如下。<br>这里要修改两个地方,其余不用改动：</p>
 <ul>
 <li>user_name</li>
