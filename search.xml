@@ -20,4 +20,17 @@
     <content><![CDATA[<p>hello, this is my first article.</p>
 ]]></content>
   </entry>
+  <entry>
+    <title>第二篇博客</title>
+    <url>/2024/03/23/%E7%AC%AC%E4%BA%8C%E7%AF%87%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<p>fdsafdas</p>
+]]></content>
+      <categories>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>Tutorial</tag>
+      </tags>
+  </entry>
 </search>
