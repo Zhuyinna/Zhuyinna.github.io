@@ -20,19 +20,21 @@
     var CONFIG = {"hostname":"zhuyinna.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"appID":"C5AN9B2N88","apiKey":"eebd5f89545a4285245406e93ab883c3","indexName":"hexo2","hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="hello, this is my first article.">
+  <meta name="description" content="Hexo搭建个人博客教程">
 <meta property="og:type" content="article">
-<meta property="og:title" content="first article">
-<meta property="og:url" content="http://zhuyinna.github.io/2024/03/23/first-article/index.html">
+<meta property="og:title" content="Hexo Tutoriol">
+<meta property="og:url" content="http://zhuyinna.github.io/source/2024/03/23/Hexo-Tutoriol/index.html">
 <meta property="og:site_name" content="Joys Blog">
-<meta property="og:description" content="hello, this is my first article.">
+<meta property="og:description" content="Hexo搭建个人博客教程">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2024-03-22T17:17:08.000Z">
-<meta property="article:modified_time" content="2024-03-22T17:59:30.804Z">
+<meta property="article:published_time" content="2024-03-22T17:19:41.000Z">
+<meta property="article:modified_time" content="2024-03-22T19:17:37.440Z">
 <meta property="article:author" content="Joy Zhu">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="Tutorial">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://zhuyinna.github.io/2024/03/23/first-article/">
+<link rel="canonical" href="http://zhuyinna.github.io/source/2024/03/23/Hexo-Tutoriol/">
 
 
 <script id="page-configurations">
@@ -45,7 +47,7 @@
   };
 </script>
 
-  <title>first article | Joys Blog</title>
+  <title>Hexo Tutoriol | Joys Blog</title>
   
 
 
@@ -190,7 +192,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://zhuyinna.github.io/2024/03/23/first-article/">
+    <link itemprop="mainEntityOfPage" href="http://zhuyinna.github.io/source/2024/03/23/Hexo-Tutoriol/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/%E5%A4%B4%E5%83%8F2.jpg">
@@ -203,7 +205,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          first article
+          Hexo Tutoriol
         </h1>
 
         <div class="post-meta">
@@ -214,11 +216,20 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2024-03-23 01:17:08 / Modified: 01:59:30" itemprop="dateCreated datePublished" datetime="2024-03-23T01:17:08+08:00">2024-03-23</time>
+              <time title="Created: 2024-03-23 01:19:41 / Modified: 03:17:37" itemprop="dateCreated datePublished" datetime="2024-03-23T01:19:41+08:00">2024-03-23</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Tutorial/" itemprop="url" rel="index"><span itemprop="name">Tutorial</span></a>
+                </span>
             </span>
 
           
-            <div class="post-description">hello, this is my first article.</div>
+            <div class="post-description">Hexo搭建个人博客教程</div>
 
         </div>
       </header>
@@ -229,7 +240,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>hello, this is my first article.</p>
+        <h1 id="1"><a href="#1" class="headerlink" title="1"></a>1</h1><h2 id="head"><a href="#head" class="headerlink" title="head"></a>head</h2><p>hexo new post “article title”<br>编写完markdown文件后，根目录下输入hexo g生成静态网页，然后输入hexo s可以本地预览效果，最后输入hexo d上传到github上。这时打开你的github.io主页就能看到发布的文章啦   </p>
+<p>搜索没有内容：<br>当我一开始安装配置完成之后，我发现 Algolia 上面没有上传我的内容，也就无法搜索到。原因其实很简单，但很容易被忽略：<br>就是你需要先执行一次 hexo clean 清除一次缓存，然后再进行 hexo algolia hexo g 操作就可以了</p>
 
     </div>
 
@@ -238,16 +250,23 @@
     
 
       <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+              <a href="/tags/Tutorial/" rel="tag"># Tutorial</a>
+          </div>
 
         
 
 
         
     <div class="post-nav">
-      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/2024/03/23/Hexo-Tutoriol/" rel="next" title="Hexo Tutoriol">
-      Hexo Tutoriol <i class="fa fa-chevron-right"></i>
+    <a href="/source/2024/03/23/first-article/" rel="prev" title="first article">
+      <i class="fa fa-chevron-left"></i> first article
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/source/2024/03/23/%E7%AC%AC%E4%BA%8C%E7%AF%87%E5%8D%9A%E5%AE%A2/" rel="next" title="第二篇博客">
+      第二篇博客 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -307,6 +326,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1"><span class="nav-number">1.</span> <span class="nav-text">1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#head"><span class="nav-number">1.1.</span> <span class="nav-text">head</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
