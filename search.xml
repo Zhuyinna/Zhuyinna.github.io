@@ -1,35 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hexo Tutoriol</title>
-    <url>/2024/03/23/Hexo-Tutoriol/</url>
-    <content><![CDATA[<h1 id="1"><a href="#1" class="headerlink" title="1"></a>1</h1><h2 id="head"><a href="#head" class="headerlink" title="head"></a>head</h2><p>hexo new post “article title”<br>编写完markdown文件后，根目录下输入hexo g生成静态网页，然后输入hexo s可以本地预览效果，最后输入hexo d上传到github上。这时打开你的github.io主页就能看到发布的文章啦   </p>
-<p>搜索没有内容：<br>当我一开始安装配置完成之后，我发现 Algolia 上面没有上传我的内容，也就无法搜索到。原因其实很简单，但很容易被忽略：<br>就是你需要先执行一次 hexo clean 清除一次缓存，然后再进行 hexo algolia hexo g 操作就可以了</p>
+    <title>hexo环境配置和踩坑记录</title>
+    <url>/2024/03/23/hexo%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<span id="more"></span>
+
+<h1 id="1-hexo搭建"><a href="#1-hexo搭建" class="headerlink" title="1. hexo搭建"></a>1. hexo搭建</h1><h2 id="1-1-下载运行程序"><a href="#1-1-下载运行程序" class="headerlink" title="1.1 下载运行程序"></a>1.1 下载运行程序</h2><p><a href="https://git-scm.com/">Git下载</a><br><a href="https://nodejs.org/en/">Nodejs下载</a></p>
+<h2 id="1-2-安装hexo"><a href="#1-2-安装hexo" class="headerlink" title="1.2 安装hexo"></a>1.2 安装hexo</h2><p><code>npm install -g hexo-cli</code></p>
+<p>测试是否安装成功</p>
+<p><code>hexo -v</code></p>
+<p>如果显示多行版本信息，则安装成功</p>
+<h2 id="1-3-初始化hexo"><a href="#1-3-初始化hexo" class="headerlink" title="1.3 初始化hexo"></a>1.3 初始化hexo</h2><p>打开想要存放博客的文件夹，右键选择Git Bash Here，输入以下命令</p>
+<p><code>hexo init</code></p>
+<h2 id="1-4-安装主题"><a href="#1-4-安装主题" class="headerlink" title="1.4 安装主题"></a>1.4 安装主题</h2><p><code>git clone https://github.com/theme-next/hexo-theme-next next</code></p>
+<p>根据需要修改全局配置文件_config.yml,以及主题配置文件themes&#x2F;next&#x2F;_config.yml</p>
+<h2 id="1-5-本地预览"><a href="#1-5-本地预览" class="headerlink" title="1.5 本地预览"></a>1.5 本地预览</h2><p><code>hexo server</code></p>
+<p>ps: 如果端口占用，可以使用<code>hexo server -p ****</code>指定端口，****为端口号，例如<code>hexo server -p 4000</code></p>
+<p>以上能够完成本地预览，但是还没有同步到github上，接下来就是部署到GitHub Pages</p>
+<h1 id="2-GitHub-Pages部署方法1-Deploy-From-a-Branch"><a href="#2-GitHub-Pages部署方法1-Deploy-From-a-Branch" class="headerlink" title="2. GitHub Pages部署方法1 - Deploy From a Branch"></a>2. GitHub Pages部署方法1 - Deploy From a Branch</h1><h2 id="2-1-创建仓库"><a href="#2-1-创建仓库" class="headerlink" title="2.1 创建仓库"></a>2.1 创建仓库</h2><p>新建一个仓库，仓库名为<code>用户名.github.io</code>，仓库名和用户名一致!</p>
+<h2 id="2-2-部署"><a href="#2-2-部署" class="headerlink" title="2.2 部署"></a>2.2 部署</h2><h2 id="2-2-1-本地和远程仓库关联"><a href="#2-2-1-本地和远程仓库关联" class="headerlink" title="2.2.1 本地和远程仓库关联"></a>2.2.1 本地和远程仓库关联</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git init</span><br><span class="line">git remote add origin &lt;url&gt;  <span class="comment"># url为仓库地址,例如 git@github.com:&lt;name&gt;/&lt;name&gt;.github.io.git</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-2-2-安装插件"><a href="#2-2-2-安装插件" class="headerlink" title="2.2.2 安装插件"></a>2.2.2 安装插件</h3><p><code>npm install hexo-deployer-git --save</code></p>
+<h3 id="2-2-3-配置"><a href="#2-2-3-配置" class="headerlink" title="2.2.3 配置"></a>2.2.3 配置</h3><p>修改_config.yml文件</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">&lt;repository</span> <span class="string">url&gt;</span> <span class="comment"># 直接复制ssh或者https地址</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">main</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-2-4-上传"><a href="#2-2-4-上传" class="headerlink" title="2.2.4 上传"></a>2.2.4 上传</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+
+<h1 id="2-3-pages设置"><a href="#2-3-pages设置" class="headerlink" title="2.3 pages设置"></a>2.3 pages设置</h1><p>进入仓库的settings，找到GitHub Pages，选择source为<code>main</code>分支，保存即可</p>
+<h1 id="2-4-new后自动打开-option"><a href="#2-4-new后自动打开-option" class="headerlink" title="2.4 new后自动打开[option]"></a>2.4 new后自动打开[option]</h1><p>新建scripts文件夹，新建一个<code>auto_open.js</code>文件，内容如下<br>这里path&#x2F;to&#x2F;your&#x2F;ide是你的编辑器的路径，例如<code>&quot;C:/Program Files/Notepad++/notepad++.exe&quot;</code></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> spawn = <span class="built_in">require</span>(<span class="string">&#x27;child_process&#x27;</span>).<span class="property">exec</span>;</span><br><span class="line">hexo.<span class="title function_">on</span>(<span class="string">&#x27;new&#x27;</span>, <span class="keyword">function</span>(<span class="params">data</span>)&#123;</span><br><span class="line">    <span class="title function_">spawn</span>(<span class="string">&#x27;start  &quot;path/to/your/ide&quot; &#x27;</span> + data.<span class="property">path</span>);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+
+<h1 id="3-Github-Pages部署方法2-WorkFlow"><a href="#3-Github-Pages部署方法2-WorkFlow" class="headerlink" title="3. Github Pages部署方法2 - WorkFlow"></a>3. Github Pages部署方法2 - WorkFlow</h1><p>一种看起来非常高大上牛逼的方法，但也是真的很麻烦，翻阅博客无数，最后error和warning也无数，放弃。看在自己差点通了个宵的份上，还是记录一下。</p>
+<h2 id="3-1-创建密钥"><a href="#3-1-创建密钥" class="headerlink" title="3.1 创建密钥"></a>3.1 创建密钥</h2><ol>
+<li><p>首先根据<a href="https://docs.github.com/en/developers/overview/managing-deploy-keys#deploy-keys">这篇文章</a>生成ssh密钥对</p>
+</li>
+<li><p>在仓库的settings，找到secrets下的Actions，点击New repository secret，创建一个名为<code>DEPLOY_KEY</code>的密钥，值为ssh私钥</p>
+</li>
+<li><p>在仓库的settings，找到Deploy keys，点击Add deploy key，将公钥粘贴进去，勾选Allow write access</p>
+</li>
+</ol>
+<p><img src="/assets/hexo%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/Snipaste_2024-03-23_15-15-22.png" alt="alt text"></p>
+<h2 id="3-2-创建workflow"><a href="#3-2-创建workflow" class="headerlink" title="3.2 创建workflow"></a>3.2 创建workflow</h2><p>在仓库的<code>.github/workflows</code>目录下创建一个<code>deploy.yml</code>文件，内容如下。<br>这里要修改两个地方,其余不用改动：</p>
+<ul>
+<li>user_name</li>
+<li>user_email</li>
+</ul>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">Deploy</span></span><br><span class="line"></span><br><span class="line"><span class="attr">on:</span> [<span class="string">push</span>]</span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">build:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">A</span> <span class="string">job</span> <span class="string">to</span> <span class="string">deploy</span> <span class="string">blog.</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Checkout</span></span><br><span class="line">      <span class="attr">uses:</span> <span class="string">actions/checkout@v2</span></span><br><span class="line">      <span class="attr">with:</span></span><br><span class="line">        <span class="attr">submodules:</span> <span class="literal">false</span> <span class="comment"># Checkout private submodules(themes or something else).</span></span><br><span class="line"></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Set</span> <span class="string">up</span> <span class="string">Node.js</span></span><br><span class="line">      <span class="attr">uses:</span> <span class="string">actions/setup-node@v2</span></span><br><span class="line">      <span class="attr">with:</span></span><br><span class="line">        <span class="attr">node-version:</span> <span class="string">&#x27;20&#x27;</span> <span class="comment"># Specify the Node.js version</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># Caching dependencies to speed up workflows. (GitHub will remove any cache entries that have not been accessed in over 7 days.)</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Cache</span> <span class="string">node</span> <span class="string">modules</span></span><br><span class="line">      <span class="attr">uses:</span> <span class="string">actions/cache@v2</span></span><br><span class="line">      <span class="attr">id:</span> <span class="string">cache</span></span><br><span class="line">      <span class="attr">with:</span></span><br><span class="line">        <span class="attr">path:</span> <span class="string">node_modules</span></span><br><span class="line">        <span class="attr">key:</span> <span class="string">$&#123;&#123;</span> <span class="string">runner.os</span> <span class="string">&#125;&#125;-node-$&#123;&#123;</span> <span class="string">hashFiles(&#x27;**/package-lock.json&#x27;)</span> <span class="string">&#125;&#125;</span></span><br><span class="line">        <span class="attr">restore-keys:</span> <span class="string">|</span></span><br><span class="line"><span class="string">          $&#123;&#123; runner.os &#125;&#125;-node-</span></span><br><span class="line"><span class="string"></span>    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Install</span> <span class="string">Dependencies</span></span><br><span class="line">      <span class="attr">if:</span> <span class="string">steps.cache.outputs.cache-hit</span> <span class="type">!=</span> <span class="string">&#x27;true&#x27;</span></span><br><span class="line">      <span class="attr">run:</span> <span class="string">npm</span> <span class="string">ci</span></span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    <span class="comment"># Deploy hexo blog website.</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Deploy</span></span><br><span class="line">      <span class="attr">id:</span> <span class="string">deploy</span></span><br><span class="line">      <span class="attr">uses:</span> <span class="string">sma11black/hexo-action@7b45fbba1ed6bde78f8ed2719ec9b7c0bd49e220</span>  <span class="comment">#v1.0.4</span></span><br><span class="line">      <span class="attr">with:</span></span><br><span class="line">        <span class="attr">deploy_key:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.DEPLOY_KEY</span> <span class="string">&#125;&#125;</span></span><br><span class="line">        <span class="attr">user_name:</span> <span class="string">&quot;your name&quot;</span>  <span class="comment"># (or delete this input setting to use bot account)</span></span><br><span class="line">        <span class="attr">user_email:</span> <span class="string">&quot;github email&quot;</span>  <span class="comment"># (or delete this input setting to use bot account)</span></span><br><span class="line">        <span class="attr">commit_msg:</span> <span class="string">$&#123;&#123;</span> <span class="string">github.event.head_commit.message</span> <span class="string">&#125;&#125;</span>  <span class="comment"># (or delete this input setting to use hexo default settings)</span></span><br><span class="line">    <span class="comment"># Use the output from the `deploy` step(use for test action)</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Get</span> <span class="string">the</span> <span class="string">output</span></span><br><span class="line">      <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line">        <span class="string">echo</span> <span class="string">&quot;$<span class="template-variable">&#123;&#123; steps.deploy.outputs.notify &#125;&#125;</span>&quot;</span></span><br></pre></td></tr></table></figure>
+
+
+<h2 id="3-3-部署"><a href="#3-3-部署" class="headerlink" title="3.3 部署"></a>3.3 部署</h2><p>其实已经部署完成了，每次push时，workflow都会自动运行，将博客部署到GitHub Pages上，只需要等待一会儿即可。但是因为我一直报错，各种奇怪的error，折腾了一下午还是决定放弃了，安慰自己方法1也很方便，就这样吧。</p>
+<h1 id="4-总结"><a href="#4-总结" class="headerlink" title="4. 总结"></a>4. 总结</h1><p>至此，hexo环境搭建，很折腾，但是终于拥有了人生第一个真正的（而且免费的）博客，还是很有成就感的。下一篇准备写一下hexo的基本语法。</p>
 ]]></content>
       <categories>
-        <category>Tutorial</category>
+        <category>Tutoriol</category>
+        <category>Hexo</category>
       </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>Tutorial</tag>
-      </tags>
   </entry>
   <entry>
-    <title>first article</title>
-    <url>/2024/03/23/first-article/</url>
-    <content><![CDATA[<p>hello, this is my first article.</p>
+    <title>hexo基本语法</title>
+    <url>/2024/03/23/hexo%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</url>
+    <content><![CDATA[<span id="more"></span>
+
+<h1 id="1-hexo命令"><a href="#1-hexo命令" class="headerlink" title="1. hexo命令"></a>1. hexo命令</h1><h2 id="1-1-创建新layout"><a href="#1-1-创建新layout" class="headerlink" title="1.1 创建新layout"></a>1.1 创建新layout</h2><p><code>hexo new [不填|post|page|draft] &quot;文章标题&quot;</code></p>
+<ol>
+<li><p>post<br>下面的234都可以通过meta信息指定<br>(1) 指定位置：<code>hexo new post &quot;文章标题&quot; /subdir/subdir/</code><br>(2) 指定分类：<code>hexo new post &quot;文章标题&quot; --category &quot;分类名称&quot;</code><br>(3) 指定标签：<code>hexo new post &quot;文章标题&quot; --tags &quot;标签1 标签2&quot;</code><br>(4) 指定布局：<code>hexo new post &quot;文章标题&quot; --layout &quot;布局名称&quot;</code></p>
+</li>
+<li><p>draft<br>TODO: to fill …</p>
+</li>
+<li><p>page<br>TODO: to fill …</p>
+</li>
+</ol>
+<h2 id="1-2-生成静态文件并部署到GitHub-Pages"><a href="#1-2-生成静态文件并部署到GitHub-Pages" class="headerlink" title="1.2 生成静态文件并部署到GitHub Pages"></a>1.2 生成静态文件并部署到GitHub Pages</h2><p><code>hexo d -g</code></p>
+<center>Continually Updated ...</center>
 ]]></content>
-  </entry>
-  <entry>
-    <title>第二篇博客</title>
-    <url>/2024/03/23/%E7%AC%AC%E4%BA%8C%E7%AF%87%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[]]></content>
       <categories>
-        <category>Tutorial</category>
+        <category>Tutoriol</category>
+        <category>Hexo</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
-        <tag>Tutorial</tag>
+        <tag>LUT</tag>
       </tags>
   </entry>
 </search>
