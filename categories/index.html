@@ -51,7 +51,7 @@
 
 
 
-<link rel="dns-prefetch" href="blog-comment-navy-five.vercel.app">
+
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
@@ -128,13 +128,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -175,10 +175,10 @@
       
       <div class="post-body"><div class="category-all-page">
   <div class="category-all-title">
-    2 categories in total
+    5 categories in total
   </div>
   <div class="category-all">
-    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Tutoriol/">Tutoriol</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Tutoriol/Hexo/">Hexo</a><span class="category-list-count">2</span></li></ul></li></ul>
+    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/LearningNote/">LearningNote</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tutorial/">Tutorial</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Tutorial/Batfile/">Batfile</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tutoriol/">Tutoriol</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Tutoriol/Hexo/">Hexo</a><span class="category-list-count">2</span></li></ul></li></ul>
   </div>
 </div>
 
@@ -192,7 +192,6 @@
     
 
 
-    <div class="comments" id="waline"></div>
 </div>
   </main>
 
@@ -239,17 +238,6 @@
 
 
 
-<script class="next-config" data-name="waline" type="application/json">{"lang":"en","enable":true,"serverURL":"blog-comment-navy-five.vercel.app","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":false,"placeholder":"comment freely","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"visitor":false,"comment_count":false,"requiredFields":[],"libUrl":"//unpkg.com/@waline/client@v2/dist/waline.js","el":"#waline","comment":true,"path":"/categories/"}</script>
-<link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css">
-<script>
-document.addEventListener('page:loaded', () => {
-  NexT.utils.loadComments(CONFIG.waline.el).then(() =>
-    NexT.utils.getScript(CONFIG.waline.libUrl, { condition: window.Waline })
-  ).then(() => 
-    Waline.init(Object.assign({}, CONFIG.waline,{ el: document.querySelector(CONFIG.waline.el) }))
-  );
-});
-</script>
 
 </body>
 </html>

@@ -15,6 +15,9 @@
 </li>
 </ol>
 <h2 id="1-2-生成静态文件并部署到GitHub-Pages"><a href="#1-2-生成静态文件并部署到GitHub-Pages" class="headerlink" title="1.2 生成静态文件并部署到GitHub Pages"></a>1.2 生成静态文件并部署到GitHub Pages</h2><p><code>hexo d -g</code></p>
+<blockquote>
+<p>缩写：命令可以缩写，条件是没有开头几个字母相同的其它命令。hexo s 实际上是 hexo server 的缩写；下文中 hexo d 是 hexo deploy 的缩写，hexo g 是 hexo generate 的缩写；hexo clean 不能缩写为 hexo c，因为存在命令 hexo config ，但是可以缩写为 hexo cl 。</p>
+</blockquote>
 <center>Continually Updated ...</center>
 ]]></content>
       <categories>
@@ -88,6 +91,42 @@
       <categories>
         <category>Tutoriol</category>
         <category>Hexo</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>动态规划</title>
+    <url>/2024/03/24/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</url>
+    <content><![CDATA[<span id="more"></span>
+
+]]></content>
+      <categories>
+        <category>LearningNote</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>批处理文件编写</title>
+    <url>/2024/03/24/%E6%89%B9%E5%A4%84%E7%90%86%E6%96%87%E4%BB%B6%E7%BC%96%E5%86%99/</url>
+    <content><![CDATA[<span id="more"></span>
+
+<h1 id="1-批处理文件编写教程"><a href="#1-批处理文件编写教程" class="headerlink" title="1 批处理文件编写教程"></a>1 批处理文件编写教程</h1><h2 id="1-1-简介"><a href="#1-1-简介" class="headerlink" title="1.1 简介"></a>1.1 简介</h2><p>批处理文件(.bat, batch file)是一种文本文件，其中包含一系列命令，这些命令通常是操作系统命令。批处理文件通常用于执行重复的任务，例如安装软件，配置系统设置等。批处理文件通常使用扩展名<code>.bat</code>或<code>.cmd</code>。在Windows系统中，批处理文件可以通过双击文件或在命令提示符下运行来执行。</p>
+<h2 id="1-2-创建"><a href="#1-2-创建" class="headerlink" title="1.2 创建"></a>1.2 创建</h2><p>在win系统中，可以使用记事本创建批处理文件，然后将其保存为<code>.bat</code>或<code>.cmd</code>文件。快捷键设置：右键-&gt;快捷方式-&gt;快捷键，设置快捷键，以便在需要时快速运行。</p>
+<blockquote>
+<p>注意：如果.bat文件中包含中文字符，在保存时需要选择<code>ANSI</code>编码，否则可能会出现乱码。</p>
+</blockquote>
+<h2 id="1-2-语法"><a href="#1-2-语法" class="headerlink" title="1.2 语法"></a>1.2 语法</h2><p>TODO: to fill …</p>
+<h1 id="2-常用用例"><a href="#2-常用用例" class="headerlink" title="2 常用用例"></a>2 常用用例</h1><h2 id="2-1-win系统"><a href="#2-1-win系统" class="headerlink" title="2.1 win系统"></a>2.1 win系统</h2><ol>
+<li><p>系统操作<br>关机：<code>shutdown -s -t 0</code><br>重启：<code>shutdown -r -t 0</code><br>注销：<code>shutdown -l</code>       </p>
+<blockquote>
+<p>参数说明：-t 0表示立即执行，-t 60表示60秒后执行</p>
+</blockquote>
+</li>
+<li><p>用vscode打开指定目录</p>
+<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="comment">REM start your program, if the path has space</span></span><br><span class="line"><span class="built_in">start</span> &quot;&quot; &quot;C:\<span class="built_in">Path</span>\To\Your\Microsoft VS Code\Code.exe&quot; &quot;D:\<span class="built_in">Path</span>\To\Your\Blog&quot;</span><br><span class="line"><span class="comment">REM exit this cmd</span></span><br><span class="line"><span class="keyword">exit</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <categories>
+        <category>Tutorial</category>
+        <category>Batfile</category>
       </categories>
   </entry>
 </search>
