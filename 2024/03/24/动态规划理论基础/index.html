@@ -20,28 +20,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"zhuyinna.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.19.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="批处理文件教程 &amp; 常用用例">
+    <meta name="description" content="代码随想录 - 动态规划学习笔记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="批处理文件编写">
-<meta property="og:url" content="http://zhuyinna.github.io/2024/03/24/%E6%89%B9%E5%A4%84%E7%90%86%E6%96%87%E4%BB%B6%E7%BC%96%E5%86%99/index.html">
+<meta property="og:title" content="动态规划理论基础">
+<meta property="og:url" content="http://zhuyinna.github.io/2024/03/24/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80/index.html">
 <meta property="og:site_name" content="Joys Blog">
-<meta property="og:description" content="批处理文件教程 &amp; 常用用例">
+<meta property="og:description" content="代码随想录 - 动态规划学习笔记">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2024-03-23T19:07:34.000Z">
-<meta property="article:modified_time" content="2024-03-24T12:50:55.555Z">
+<meta property="article:published_time" content="2024-03-23T19:24:54.000Z">
+<meta property="article:modified_time" content="2024-03-25T05:20:13.079Z">
 <meta property="article:author" content="Joy Zhu">
-<meta property="article:tag" content="bat">
+<meta property="article:tag" content="dp">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://zhuyinna.github.io/2024/03/24/%E6%89%B9%E5%A4%84%E7%90%86%E6%96%87%E4%BB%B6%E7%BC%96%E5%86%99/">
+<link rel="canonical" href="http://zhuyinna.github.io/2024/03/24/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://zhuyinna.github.io/2024/03/24/%E6%89%B9%E5%A4%84%E7%90%86%E6%96%87%E4%BB%B6%E7%BC%96%E5%86%99/","path":"2024/03/24/批处理文件编写/","title":"批处理文件编写"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://zhuyinna.github.io/2024/03/24/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80/","path":"2024/03/24/动态规划理论基础/","title":"动态规划理论基础"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>批处理文件编写 | Joys Blog</title>
+<title>动态规划理论基础 | Joys Blog</title>
   
 
 
@@ -141,7 +141,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">TL;DR</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">1 批处理文件编写教程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-%E7%AE%80%E4%BB%8B"><span class="nav-text">1.1 简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-%E5%88%9B%E5%BB%BA"><span class="nav-text">1.2 创建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-%E8%AF%AD%E6%B3%95"><span class="nav-text">1.2 语法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">2 常用用例</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-win%E7%B3%BB%E7%BB%9F"><span class="nav-text">2.1 win系统</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">TL;DR</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">1. 动规五部曲</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">2. 题目</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-509-%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0"><span class="nav-text">2.1 509-斐波那契数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-70-%E7%88%AC%E6%A5%BC%E6%A2%AF"><span class="nav-text">2.2 70-爬楼梯</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-746-%E4%BD%BF%E7%94%A8%E6%9C%80%E5%B0%8F%E8%8A%B1%E8%B4%B9%E7%88%AC%E6%A5%BC%E6%A2%AF"><span class="nav-text">2.3 746-使用最小花费爬楼梯</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-62-%E4%B8%8D%E5%90%8C%E8%B7%AF%E5%BE%84"><span class="nav-text">2.4 62-不同路径</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-5-63-%E4%B8%8D%E5%90%8C%E8%B7%AF%E5%BE%84II"><span class="nav-text">2.5 63-不同路径II</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-6-343-%E6%95%B4%E6%95%B0%E6%8B%86%E5%88%86"><span class="nav-text">2.6 343-整数拆分</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#96-%E4%B8%8D%E5%90%8C%E7%9A%84%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91"><span class="nav-text">96-不同的二叉搜索树</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -194,7 +194,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://zhuyinna.github.io/2024/03/24/%E6%89%B9%E5%A4%84%E7%90%86%E6%96%87%E4%BB%B6%E7%BC%96%E5%86%99/">
+    <link itemprop="mainEntityOfPage" href="http://zhuyinna.github.io/2024/03/24/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/%E5%A4%B4%E5%83%8F2.jpg">
@@ -207,12 +207,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="批处理文件编写 | Joys Blog">
-      <meta itemprop="description" content="批处理文件教程 & 常用用例">
+      <meta itemprop="name" content="动态规划理论基础 | Joys Blog">
+      <meta itemprop="description" content="代码随想录 - 动态规划学习笔记">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          批处理文件编写
+          动态规划理论基础
         </h1>
 
         <div class="post-meta-container">
@@ -222,9 +222,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2024-03-24 03:07:34 / Modified: 20:50:55" itemprop="dateCreated datePublished" datetime="2024-03-24T03:07:34+08:00">2024-03-24</time>
+      <time title="Created: 2024-03-24 03:24:54" itemprop="dateCreated datePublished" datetime="2024-03-24T03:24:54+08:00">2024-03-24</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2024-03-25 13:20:13" itemprop="dateModified" datetime="2024-03-25T13:20:13+08:00">2024-03-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -232,18 +238,22 @@
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">教程</span></a>
+          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
         </span>
           , 
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%95%99%E7%A8%8B/Bat%E8%84%9A%E6%9C%AC/" itemprop="url" rel="index"><span itemprop="name">Bat脚本</span></a>
+          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%AE%97%E6%B3%95%E5%90%88%E9%9B%86/" itemprop="url" rel="index"><span itemprop="name">算法合集</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%AE%97%E6%B3%95%E5%90%88%E9%9B%86/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" itemprop="url" rel="index"><span itemprop="name">动态规划</span></a>
         </span>
     </span>
 
   
 </div>
 
-            <div class="post-description">批处理文件教程 & 常用用例</div>
+            <div class="post-description">代码随想录 - 动态规划学习笔记</div>
         </div>
       </header>
 
@@ -252,32 +262,110 @@
     
     <div class="post-body" itemprop="articleBody"><span id="more"></span>
 <h1>TL;DR</h1>
-<p>批处理文件(.bat, batch file)是一种文本文件，其中包含一系列命令，这些命令通常是操作系统命令。批处理文件通常用于执行重复的任务，例如安装软件，配置系统设置等。批处理文件通常使用扩展名.bat或.cmd。在Windows系统中，批处理文件可以通过双击文件或在命令提示符下运行来执行。</p>
-<h1>1 批处理文件编写教程</h1>
-<h2 id="1-1-简介">1.1 简介</h2>
-<p>批处理文件(.bat, batch file)是一种文本文件，其中包含一系列命令，这些命令通常是操作系统命令。批处理文件通常用于执行重复的任务，例如安装软件，配置系统设置等。批处理文件通常使用扩展名.bat或.cmd。在Windows系统中，批处理文件可以通过双击文件或在命令提示符下运行来执行。</p>
-<h2 id="1-2-创建">1.2 创建</h2>
-<p>在win系统中，可以使用记事本创建批处理文件，然后将其保存为.bat或.cmd文件。快捷键设置：右键-&gt;快捷方式-&gt;快捷键，设置快捷键，以便在需要时快速运行。</p>
-<blockquote>
-<p>注意：如果.bat文件中包含中文字符，在保存时需要选择ANSI编码，否则可能会出现乱码。</p>
-</blockquote>
-<h2 id="1-2-语法">1.2 语法</h2>
-<p>TODO: to fill …</p>
-<h1>2 常用用例</h1>
-<h2 id="2-1-win系统">2.1 win系统</h2>
+<p>动态规划（Dynamic Programming，DP）是一种在数学、计算机科学和经济学中使用的，通过把原问题分解为相对简单的子问题的方式求解复杂问题的方法。动态规划常常适用于有重叠子问题和最优子结构性质的问题，动态规划方法通常用于求解最优化问题。</p>
+<h1>1. 动规五部曲</h1>
 <ol>
-<li>系统操作<br>
-关机：<code>shutdown -s -t 0</code><br>
-重启：<code>shutdown -r -t 0</code><br>
-注销：<code>shutdown -l</code></li>
+<li>确定dp数组（dp table）以及下标的含义</li>
+<li>确定递推公式</li>
+<li>dp数组如何初始化</li>
+<li>确定遍历顺序</li>
+<li>举例推导dp数组</li>
 </ol>
-<blockquote>
-<p>参数说明：-t 0表示立即执行，-t 60表示60秒后执行</p>
-</blockquote>
-<ol start="2">
-<li>用vscode打开指定目录</li>
+<h1>2. 题目</h1>
+<h2 id="2-1-509-斐波那契数">2.1 509-斐波那契数</h2>
+<p>leetcode题目链接 - <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/fibonacci-number/">509. 斐波那契数</a></p>
+<ol>
+<li>dp数组以及下标的含义<br>
+dp[i]的定义为：第i个斐波那契数的值为dp[i]</li>
+<li>递推公式<br>
+dp[i] = dp[i-1] + dp[i-2]</li>
+<li>dp数组初始化<br>
+dp[0] = 0, dp[1] = 1</li>
+<li>遍历顺序<br>
+从前往后遍历</li>
+<li>举例推导dp数组</li>
 </ol>
-<figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="comment">REM start your program, if the path has space</span></span><br><span class="line"><span class="built_in">start</span> &quot;&quot; &quot;C:\<span class="built_in">Path</span>\To\Your\Microsoft VS Code\Code.exe&quot; &quot;D:\<span class="built_in">Path</span>\To\Your\Blog&quot;</span><br><span class="line"><span class="comment">REM exit this cmd</span></span><br><span class="line"><span class="keyword">exit</span></span><br></pre></td></tr></table></figure>
+<h2 id="2-2-70-爬楼梯">2.2 70-爬楼梯</h2>
+<p>leetcode题目链接 - <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/climbing-stairs/">70. 爬楼梯</a></p>
+<ol>
+<li>dp数组以及下标的含义<br>
+dp[i]的定义为：爬到第i阶楼梯的方法数为dp[i]</li>
+<li>递推公式<br>
+从i-1到达i + 从i-2到达i,<br>
+dp[i] = dp[i-1] + dp[i-2]</li>
+<li>dp数组初始化<br>
+注意题目中强调n为正整数,所以不用考虑0<br>
+dp[1] = 1, dp[2] = 2</li>
+<li>遍历顺序<br>
+从前往后遍历</li>
+<li>举例推导dp数组<br>
+1, 1, 2, 3…</li>
+</ol>
+<h2 id="2-3-746-使用最小花费爬楼梯">2.3 746-使用最小花费爬楼梯</h2>
+<p>leetcode题目链接 - <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/min-cost-climbing-stairs/">746. 使用最小花费爬楼梯</a></p>
+<ol>
+<li>dp数组以及下标的含义<br>
+dp[i]定义为到达i台阶最小花费</li>
+<li>递推公式<br>
+假设一踩到台阶,就会耗费体力. 这里cost[i-1]原因是: dp数组从1开始, cost数组从0开始<br>
+dp[i] = min(dp[i-1], dp[i-2]) + cost[i-1]<br>
+return值:注意这里<code>return min(dp[n],dp[n-1])</code></li>
+<li>dp数组初始化<br>
+dp[0] = 0, dp[1] = cost[0]</li>
+<li>遍历顺序<br>
+从前往后遍历</li>
+</ol>
+<h2 id="2-4-62-不同路径">2.4 62-不同路径</h2>
+<p>leetcode题目链接 - <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/unique-paths/">62. 不同路径</a></p>
+<ol>
+<li>dp数组以及下标的含义<br>
+dp[i][j]的定义为：到达坐标(i,j)的路径数为dp[i][j]</li>
+<li>递推公式<br>
+<code>dp[i][j] = dp[i-1][j] + dp[i][j-1]</code></li>
+<li>dp数组初始化<br>
+<code>dp[0][j] = 1, dp[i][0] = 1</code></li>
+<li>遍历顺序<br>
+i:1-&gt;m, j:1-&gt;n</li>
+</ol>
+<h2 id="2-5-63-不同路径II">2.5 63-不同路径II</h2>
+<p>leetcode题目链接 - <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/unique-paths-ii/">63. 不同路径 II</a><br>
+和62题类似,只是加了障碍物,不同点:</p>
+<ol>
+<li>初始化<br>
+dp[0][j] = 1, dp[i][0] = 1, 如果遇到障碍物,则后面的都是0</li>
+<li>递推公式<br>
+和62题一样,只是加了障碍物判断: 如果是障碍物,则dp[i][j] = 0</li>
+</ol>
+<h2 id="2-6-343-整数拆分">2.6 343-整数拆分</h2>
+<p>leetcode题目链接 - <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/integer-break/">343. 整数拆分</a></p>
+<ol>
+<li>dp数组以及下标的含义<br>
+dp[i]的定义为：整数i拆分后的最大乘积为dp[i]</li>
+<li>递推公式<br>
+不拆分dp[i]/拆分成两部分j和i-j,其中i-j可以继续拆分或者不拆分<br>
+dp[i] = max(dp[i], max(j<em>dp[i-j],j</em>(i-j)))</li>
+<li>dp数组初始化<br>
+dp[2] = 1</li>
+<li>遍历顺序<br>
+i:[2,n], j:[1,i-1]</li>
+</ol>
+<h2 id="96-不同的二叉搜索树">96-不同的二叉搜索树</h2>
+<p>leetcode题目链接 - <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/unique-binary-search-trees/">96. 不同的二叉搜索树</a></p>
+<ol>
+<li>dp数组以及下标的含义<br>
+i为根节点,dp[i]为以i为根节点的二叉搜索树的个数</li>
+<li>递推公式<br>
+dp[i]表示总共有i个节点,有几个树. 其中j作为根节点时,左子树有j-1个节点,右子树有i-j个节点, j需要从1到i遍历</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,n+<span class="number">1</span>):</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,i+<span class="number">1</span>):</span><br><span class="line">        dp[i] += dp[j-<span class="number">1</span>]*dp[i-j]</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>dp数组初始化<br>
+注意这里虽然n不会是0,但是考虑到后面是左右子树如果一颗空树的时候,不能乘以0,所以必须改成1<br>
+dp[0]=1, dp[1]=1, dp[2]=2</li>
+<li>遍历顺序<br>
+i:[1,n]</li>
+</ol>
+
     </div>
 
     
@@ -286,20 +374,20 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/bat/" rel="tag"># bat</a>
+              <a href="/tags/dp/" rel="tag"># dp</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2024/03/23/hexo%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" rel="prev" title="hexo基本语法">
-                  <i class="fa fa-angle-left"></i> hexo基本语法
+                <a href="/2024/03/24/%E6%89%B9%E5%A4%84%E7%90%86%E6%96%87%E4%BB%B6%E7%BC%96%E5%86%99/" rel="prev" title="批处理文件编写">
+                  <i class="fa fa-angle-left"></i> 批处理文件编写
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2024/03/24/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80/" rel="next" title="动态规划理论基础">
-                  动态规划理论基础 <i class="fa fa-angle-right"></i>
+                <a href="/2024/03/24/%E4%BA%8C%E5%8F%89%E6%A0%91/" rel="next" title="二叉树">
+                  二叉树 <i class="fa fa-angle-right"></i>
                 </a>
             </div>
           </div>
