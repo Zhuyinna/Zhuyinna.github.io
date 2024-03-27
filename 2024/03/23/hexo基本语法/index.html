@@ -17,6 +17,7 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha256-wiz7ZSCn/btzhjKDQBms9Hx4sSeUYsDrTLg7roPstac=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.33/fancybox/fancybox.css" integrity="sha256-gkQVf8UKZgQ0HyuxL/VnacadJ+D2Kox2TCEBuNQg5+w=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"zhuyinna.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.19.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
@@ -28,7 +29,7 @@
 <meta property="og:description" content="hexo基本命令 &amp; 常用语法">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-03-23T07:17:37.000Z">
-<meta property="article:modified_time" content="2024-03-25T16:48:37.969Z">
+<meta property="article:modified_time" content="2024-03-26T14:39:19.967Z">
 <meta property="article:author" content="Joy Zhu">
 <meta property="article:tag" content="hexo">
 <meta name="twitter:card" content="summary">
@@ -141,7 +142,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">TL;DR</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">1. hexo命令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-%E5%88%9B%E5%BB%BA%E6%96%B0layout"><span class="nav-text">1.1 创建新layout</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-%E7%94%9F%E6%88%90%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6%E5%B9%B6%E9%83%A8%E7%BD%B2"><span class="nav-text">1.2 生成静态文件并部署</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">2. 特殊语法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-note"><span class="nav-text">2.1 note</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-tabs"><span class="nav-text">2.2 tabs</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-post-link"><span class="nav-text">2.3 post_link</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">3. 公式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-%E5%AE%89%E8%A3%85"><span class="nav-text">3.1 安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-%E8%AF%AD%E6%B3%95"><span class="nav-text">3.2 语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F"><span class="nav-text">注意</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#TL-DR"><span class="nav-text">TL;DR</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-hexo%E5%91%BD%E4%BB%A4"><span class="nav-text">1. hexo命令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-%E5%88%9B%E5%BB%BA%E6%96%B0layout"><span class="nav-text">1.1 创建新layout</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-%E7%94%9F%E6%88%90%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6%E5%B9%B6%E9%83%A8%E7%BD%B2"><span class="nav-text">1.2 生成静态文件并部署</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E7%89%B9%E6%AE%8A%E8%AF%AD%E6%B3%95"><span class="nav-text">2. 特殊语法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-note"><span class="nav-text">2.1 note</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-tabs"><span class="nav-text">2.2 tabs</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-post-link"><span class="nav-text">2.3 post_link</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-%E5%85%AC%E5%BC%8F"><span class="nav-text">3. 公式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-%E5%AE%89%E8%A3%85"><span class="nav-text">3.1 安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-%E8%AF%AD%E6%B3%95"><span class="nav-text">3.2 语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F"><span class="nav-text">注意</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -156,13 +157,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-count">10</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-count">13</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -230,7 +231,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2024-03-26 00:48:37" itemprop="dateModified" datetime="2024-03-26T00:48:37+08:00">2024-03-26</time>
+      <time title="Modified: 2024-03-26 22:39:19" itemprop="dateModified" datetime="2024-03-26T22:39:19+08:00">2024-03-26</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -257,71 +258,36 @@
     
     
     <div class="post-body" itemprop="articleBody"><span id="more"></span>
-<h1>TL;DR</h1>
-<p><em>Not completed …</em></p>
-<h1>1. hexo命令</h1>
-<h2 id="1-1-创建新layout">1.1 创建新layout</h2>
-<p><code>hexo new [不填|post|page|draft] &quot;文章标题&quot;</code></p>
+<h1 id="TL-DR"><a href="#TL-DR" class="headerlink" title="TL;DR"></a>TL;DR</h1><p><em>Not completed …</em></p>
+<h1 id="1-hexo命令"><a href="#1-hexo命令" class="headerlink" title="1. hexo命令"></a>1. hexo命令</h1><h2 id="1-1-创建新layout"><a href="#1-1-创建新layout" class="headerlink" title="1.1 创建新layout"></a>1.1 创建新layout</h2><p><code>hexo new [不填|post|page|draft] &quot;文章标题&quot;</code></p>
 <ol>
-<li>
-<p>post<br>
-下面的234都可以通过meta信息指定<br>
-指定位置：hexo new post “文章标题” /subdir/subdir/<br>
-指定分类：hexo new post “文章标题” --category “分类名称”<br>
-指定标签：hexo new post “文章标题” --tags “标签1 标签2”<br>
-指定布局：hexo new post “文章标题” --layout “布局名称”</p>
+<li><p>post<br>下面的234都可以通过meta信息指定<br>指定位置：hexo new post “文章标题” /subdir/subdir/<br>指定分类：hexo new post “文章标题” —category “分类名称”<br>指定标签：hexo new post “文章标题” —tags “标签1 标签2”<br>指定布局：hexo new post “文章标题” —layout “布局名称”</p>
 </li>
-<li>
-<p>draft<br>
-新建: <code>hexo new draft '博文示例'</code><br>
-在本地服务器预览: <code>hexo s --draft</code><br>
-发布草稿: <code>hexo publish post 博文示例</code></p>
+<li><p>draft<br>新建: <code>hexo new draft &#39;博文示例&#39;</code><br>在本地服务器预览: <code>hexo s --draft</code><br>发布草稿: <code>hexo publish post 博文示例</code></p>
 <blockquote>
 <p>ps: 这里post之后的文件名称不需要写全, 只需要写前几个字符即可. 如果没有找到对应的文件会报错的</p>
 </blockquote>
 </li>
-<li>
-<p>page<br>
-TODO: to fill …</p>
+<li><p>page<br>TODO: to fill …</p>
 </li>
 </ol>
-<h2 id="1-2-生成静态文件并部署">1.2 生成静态文件并部署</h2>
-<p><code>hexo d -g</code></p>
+<h2 id="1-2-生成静态文件并部署"><a href="#1-2-生成静态文件并部署" class="headerlink" title="1.2 生成静态文件并部署"></a>1.2 生成静态文件并部署</h2><p><code>hexo d -g</code></p>
 <blockquote>
 <p>缩写：命令可以缩写，条件是没有开头几个字母相同的其它命令。<code>hexo s</code> 实际上是 <code>hexo server</code> 的缩写；下文中 <code>hexo d</code> 是 <code>hexo deploy</code> 的缩写，<code>hexo g</code> 是 <code>hexo generate</code> 的缩写；<code>hexo clean</code> 不能缩写为 <code>hexo c</code>，因为存在命令 <code>hexo config</code> ，但是可以缩写为 <code>hexo cl</code> 。</p>
 </blockquote>
-<h1>2. 特殊语法</h1>
-<h2 id="2-1-note">2.1 note</h2>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% note default %&#125;</span><br><span class="line">class_name: default, primary, success, info, warning, danger</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="2-特殊语法"><a href="#2-特殊语法" class="headerlink" title="2. 特殊语法"></a>2. 特殊语法</h1><h2 id="2-1-note"><a href="#2-1-note" class="headerlink" title="2.1 note"></a>2.1 note</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% note default %&#125;</span><br><span class="line">class_name: default, primary, success, info, warning, danger</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
 <div class="note default"><p>class_name: default, primary, success, info, warning, danger</p>
 </div>
-<h2 id="2-2-tabs">2.2 tabs</h2>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;% tabs %&#125;</span><br><span class="line">&lt;!-- tab Tab1 --&gt;</span><br><span class="line">Content of Tab1</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&lt;!-- tab Tab2 --&gt;</span><br><span class="line">Content of Tab2</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&#123;% endtabs %&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="2-2-tabs"><a href="#2-2-tabs" class="headerlink" title="2.2 tabs"></a>2.2 tabs</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;% tabs %&#125;</span><br><span class="line">&lt;!-- tab Tab1 --&gt;</span><br><span class="line">Content of Tab1</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&lt;!-- tab Tab2 --&gt;</span><br><span class="line">Content of Tab2</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&#123;% endtabs %&#125;</span><br></pre></td></tr></table></figure>
 <div class="tabs" id="tab1"><ul class="nav-tabs"><li class="tab active"><a href="#tab1-1">Tab1</a></li><li class="tab"><a href="#tab1-2">Tab2</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tab1-1"><p>Content of Tab1</p></div><div class="tab-pane" id="tab1-2"><p>Content of Tab2</p></div></div></div>
-<h2 id="2-3-post-link">2.3 post_link</h2>
-<p>用于blog内部跳转</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% post_link 文件名 %&#125;</span><br></pre></td></tr></table></figure>
-<a href="/2024/03/24/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80/" title="动态规划理论基础">动态规划理论基础</a>
-<h1>3. 公式</h1>
-<p>这里推荐一个图片转latex公式的网站Simpletex: <a target="_blank" rel="noopener" href="https://simpletex.cn/">https://simpletex.cn/</a><br>
-算是<a target="_blank" rel="noopener" href="https://mathpix.com/">mathpix</a>的平替吧, 日常偶尔用用Simpletex应该也够了</p>
-<h2 id="3-1-安装">3.1 安装</h2>
-<p>安装插件katex插件: <code>npm install hexo-renderer-katex --save</code><br>
-修改配置文件_config.yml, 增加:</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Katex数学公式(allpost设置为false时只有头部设置math:true的文章才开启)</span></span><br><span class="line"><span class="attr">katex:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">allpost:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">copy_tex:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-<p>修改themes/next/_config.yml:</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">math:</span></span><br><span class="line">  <span class="comment"># Default (false) will load mathjax / katex script on demand.</span></span><br><span class="line">  <span class="comment"># That is it only render those page which has `mathjax: true` in front-matter.</span></span><br><span class="line">  <span class="comment"># If you set it to true, it will load mathjax / katex script EVERY PAGE.</span></span><br><span class="line">  <span class="attr">every_page:</span> <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">mathjax:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">    <span class="comment"># Available values: none | ams | all</span></span><br><span class="line">    <span class="attr">tags:</span> <span class="string">none</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">katex:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">    <span class="comment"># See: https://github.com/KaTeX/KaTeX/tree/master/contrib/copy-tex</span></span><br><span class="line">    <span class="attr">copy_tex:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-<p>插件安装完成, 只需在post的头部添加<code>mathjax: true</code>即可开启公式支持</p>
-<h2 id="3-2-语法">3.2 语法</h2>
-<p>TODO: to fill …</p>
-<h2 id="注意">注意</h2>
-<p>有些复杂公式hexo渲染会有问题</p>
+<h2 id="2-3-post-link"><a href="#2-3-post-link" class="headerlink" title="2.3 post_link"></a>2.3 post_link</h2><p>用于blog内部跳转<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% post_link 文件名 %&#125;</span><br></pre></td></tr></table></figure><br><a href="/2024/03/24/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80/" title="动态规划理论基础">动态规划理论基础</a></p>
+<h1 id="3-公式"><a href="#3-公式" class="headerlink" title="3. 公式"></a>3. 公式</h1><p>这里推荐一个图片转latex公式的网站Simpletex: <a target="_blank" rel="noopener" href="https://simpletex.cn/">https://simpletex.cn/</a><br>算是<a target="_blank" rel="noopener" href="https://mathpix.com/">mathpix</a>的平替吧, 日常偶尔用用Simpletex应该也够了</p>
+<h2 id="3-1-安装"><a href="#3-1-安装" class="headerlink" title="3.1 安装"></a>3.1 安装</h2><p>安装插件katex插件: <code>npm install hexo-renderer-katex --save</code><br>修改配置文件(如果没有对应的配置项, 则添加):<br><figure class="highlight yml"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Katex数学公式(allpost设置为false时只有头部设置math:true的文章才开启)</span></span><br><span class="line"><span class="attr">katex:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">allpost:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">copy_tex:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure><br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">math:</span> <span class="string">themes/next/_config.yml</span></span><br><span class="line">  <span class="comment"># Default (false) will load mathjax / katex script on demand.</span></span><br><span class="line">  <span class="comment"># That is it only render those page which has `mathjax: true` in front-matter.</span></span><br><span class="line">  <span class="comment"># If you set it to true, it will load mathjax / katex script EVERY PAGE.</span></span><br><span class="line">  <span class="attr">every_page:</span> <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">mathjax:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">    <span class="comment"># Available values: none | ams | all</span></span><br><span class="line">    <span class="attr">tags:</span> <span class="string">none</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">katex:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">    <span class="comment"># See: https://github.com/KaTeX/KaTeX/tree/master/contrib/copy-tex</span></span><br><span class="line">    <span class="attr">copy_tex:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure><br>插件安装完成, 只需在post的头部添加<code>mathjax: true</code>即可开启公式支持</p>
+<h2 id="3-2-语法"><a href="#3-2-语法" class="headerlink" title="3.2 语法"></a>3.2 语法</h2><p>TODO: to fill …</p>
+<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p>有些复杂公式hexo渲染会有问题</p>
 <ol>
-<li>换行<br>
-例如这里, 用simpletex得到的公式, 只有\, 虽然本地md渲染正确, 但是hexo就会出错, 应该改成 \\, 这里mathjax应该把\解析为了转义字符<br>
-<img src=https://s2.loli.net/2024/03/26/GDkhwViYyO5ldEu.png width='100%'></li>
-<li>大括号<br>
-尽量不要写’{', 写\lbrace比较好, 右括号也一样</li>
+<li>换行<br>例如这里, 用simpletex得到的公式, 只有\\, 虽然本地md渲染正确, 但是hexo就会出错, 应该改成 \\\\, 这里mathjax应该把\解析为了转义字符<br><img src=https://s2.loli.net/2024/03/26/GDkhwViYyO5ldEu.png width='100%'></li>
+<li>大括号<br>尽量不要写’\{‘, 写\lbrace比较好, 右括号也一样</li>
 </ol>
 <p align='right'>Continuously updated, so stay tuned!</p>
     </div>
@@ -390,7 +356,11 @@ TODO: to fill …</p>
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.33/fancybox/fancybox.umd.js" integrity="sha256-+2+qOqR8CKoHh/AsVR9k2qaDBKWjYNC2nozhYmv5j9k=" crossorigin="anonymous"></script>
 <script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+<script src="/js/jquery.min.js"></script><script src="/js/code-unfold.js"></script>
+
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
 <script src="/js/third-party/search/local-search.js"></script>
@@ -400,6 +370,7 @@ TODO: to fill …</p>
   <script src="/js/third-party/tags/mermaid.js"></script>
 
 
+  <script src="/js/third-party/fancybox.js"></script>
 
 
 

@@ -17,6 +17,7 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha256-wiz7ZSCn/btzhjKDQBms9Hx4sSeUYsDrTLg7roPstac=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.33/fancybox/fancybox.css" integrity="sha256-gkQVf8UKZgQ0HyuxL/VnacadJ+D2Kox2TCEBuNQg5+w=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"zhuyinna.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.19.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
@@ -141,7 +142,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">TL;DR</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">1 批处理文件编写教程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-%E7%AE%80%E4%BB%8B"><span class="nav-text">1.1 简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-%E5%88%9B%E5%BB%BA"><span class="nav-text">1.2 创建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-%E8%AF%AD%E6%B3%95"><span class="nav-text">1.2 语法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">2 常用用例</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-win%E7%B3%BB%E7%BB%9F"><span class="nav-text">2.1 win系统</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#TL-DR"><span class="nav-text">TL;DR</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E6%89%B9%E5%A4%84%E7%90%86%E6%96%87%E4%BB%B6%E7%BC%96%E5%86%99%E6%95%99%E7%A8%8B"><span class="nav-text">1 批处理文件编写教程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-%E7%AE%80%E4%BB%8B"><span class="nav-text">1.1 简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-%E5%88%9B%E5%BB%BA"><span class="nav-text">1.2 创建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-%E8%AF%AD%E6%B3%95"><span class="nav-text">1.2 语法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E5%B8%B8%E7%94%A8%E7%94%A8%E4%BE%8B"><span class="nav-text">2 常用用例</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-win%E7%B3%BB%E7%BB%9F"><span class="nav-text">2.1 win系统</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -156,13 +157,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-count">10</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-count">13</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -251,33 +252,23 @@
     
     
     <div class="post-body" itemprop="articleBody"><span id="more"></span>
-<h1>TL;DR</h1>
-<p>批处理文件(.bat, batch file)是一种文本文件，其中包含一系列命令，这些命令通常是操作系统命令。批处理文件通常用于执行重复的任务，例如安装软件，配置系统设置等。批处理文件通常使用扩展名.bat或.cmd。在Windows系统中，批处理文件可以通过双击文件或在命令提示符下运行来执行。</p>
-<h1>1 批处理文件编写教程</h1>
-<h2 id="1-1-简介">1.1 简介</h2>
-<p>批处理文件(.bat, batch file)是一种文本文件，其中包含一系列命令，这些命令通常是操作系统命令。批处理文件通常用于执行重复的任务，例如安装软件，配置系统设置等。批处理文件通常使用扩展名.bat或.cmd。在Windows系统中，批处理文件可以通过双击文件或在命令提示符下运行来执行。</p>
-<h2 id="1-2-创建">1.2 创建</h2>
-<p>在win系统中，可以使用记事本创建批处理文件，然后将其保存为.bat或.cmd文件。快捷键设置：右键-&gt;快捷方式-&gt;快捷键，设置快捷键，以便在需要时快速运行。</p>
+<h1 id="TL-DR"><a href="#TL-DR" class="headerlink" title="TL;DR"></a>TL;DR</h1><p>批处理文件(.bat, batch file)是一种文本文件，其中包含一系列命令，这些命令通常是操作系统命令。批处理文件通常用于执行重复的任务，例如安装软件，配置系统设置等。批处理文件通常使用扩展名.bat或.cmd。在Windows系统中，批处理文件可以通过双击文件或在命令提示符下运行来执行。</p>
+<h1 id="1-批处理文件编写教程"><a href="#1-批处理文件编写教程" class="headerlink" title="1 批处理文件编写教程"></a>1 批处理文件编写教程</h1><h2 id="1-1-简介"><a href="#1-1-简介" class="headerlink" title="1.1 简介"></a>1.1 简介</h2><p>批处理文件(.bat, batch file)是一种文本文件，其中包含一系列命令，这些命令通常是操作系统命令。批处理文件通常用于执行重复的任务，例如安装软件，配置系统设置等。批处理文件通常使用扩展名.bat或.cmd。在Windows系统中，批处理文件可以通过双击文件或在命令提示符下运行来执行。</p>
+<h2 id="1-2-创建"><a href="#1-2-创建" class="headerlink" title="1.2 创建"></a>1.2 创建</h2><p>在win系统中，可以使用记事本创建批处理文件，然后将其保存为.bat或.cmd文件。快捷键设置：右键-&gt;快捷方式-&gt;快捷键，设置快捷键，以便在需要时快速运行。</p>
 <blockquote>
 <p>注意：如果.bat文件中包含中文字符，在保存时需要选择ANSI编码，否则可能会出现乱码。</p>
 </blockquote>
-<h2 id="1-2-语法">1.2 语法</h2>
-<p>TODO: to fill …</p>
-<h1>2 常用用例</h1>
-<h2 id="2-1-win系统">2.1 win系统</h2>
-<ol>
-<li>系统操作<br>
-关机：<code>shutdown -s -t 0</code><br>
-重启：<code>shutdown -r -t 0</code><br>
-注销：<code>shutdown -l</code></li>
+<h2 id="1-2-语法"><a href="#1-2-语法" class="headerlink" title="1.2 语法"></a>1.2 语法</h2><p>TODO: to fill …</p>
+<h1 id="2-常用用例"><a href="#2-常用用例" class="headerlink" title="2 常用用例"></a>2 常用用例</h1><h2 id="2-1-win系统"><a href="#2-1-win系统" class="headerlink" title="2.1 win系统"></a>2.1 win系统</h2><ol>
+<li>系统操作<br>关机：<code>shutdown -s -t 0</code><br>重启：<code>shutdown -r -t 0</code><br>注销：<code>shutdown -l</code></li>
 </ol>
 <blockquote>
 <p>参数说明：-t 0表示立即执行，-t 60表示60秒后执行</p>
 </blockquote>
-<ol start="2">
-<li>用vscode打开指定目录</li>
+<ol>
+<li>用vscode打开指定目录<figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="comment">REM start your program, if the path has space</span></span><br><span class="line"><span class="built_in">start</span> &quot;&quot; &quot;C:\<span class="built_in">Path</span>\To\Your\Microsoft VS Code\Code.exe&quot; &quot;D:\<span class="built_in">Path</span>\To\Your\Blog&quot;</span><br><span class="line"><span class="comment">REM exit this cmd</span></span><br><span class="line"><span class="keyword">exit</span></span><br></pre></td></tr></table></figure></li>
 </ol>
-<figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="comment">REM start your program, if the path has space</span></span><br><span class="line"><span class="built_in">start</span> &quot;&quot; &quot;C:\<span class="built_in">Path</span>\To\Your\Microsoft VS Code\Code.exe&quot; &quot;D:\<span class="built_in">Path</span>\To\Your\Blog&quot;</span><br><span class="line"><span class="comment">REM exit this cmd</span></span><br><span class="line"><span class="keyword">exit</span></span><br></pre></td></tr></table></figure>
+
     </div>
 
     
@@ -344,7 +335,11 @@
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.33/fancybox/fancybox.umd.js" integrity="sha256-+2+qOqR8CKoHh/AsVR9k2qaDBKWjYNC2nozhYmv5j9k=" crossorigin="anonymous"></script>
 <script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+<script src="/js/jquery.min.js"></script><script src="/js/code-unfold.js"></script>
+
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
 <script src="/js/third-party/search/local-search.js"></script>
@@ -354,6 +349,7 @@
   <script src="/js/third-party/tags/mermaid.js"></script>
 
 
+  <script src="/js/third-party/fancybox.js"></script>
 
 
 

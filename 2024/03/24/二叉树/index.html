@@ -17,6 +17,7 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha256-wiz7ZSCn/btzhjKDQBms9Hx4sSeUYsDrTLg7roPstac=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.33/fancybox/fancybox.css" integrity="sha256-gkQVf8UKZgQ0HyuxL/VnacadJ+D2Kox2TCEBuNQg5+w=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"zhuyinna.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.19.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
@@ -141,7 +142,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">TL;DR</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">1. 二叉树的种类</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-%E6%BB%A1%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="nav-text">1.1 满二叉树</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-%E5%AE%8C%E5%85%A8%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="nav-text">1.2 完全二叉树</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91"><span class="nav-text">1.3 二叉搜索树</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91"><span class="nav-text">1.4 平衡二叉搜索树</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">2. 二叉树的遍历</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86"><span class="nav-text">2.1 深度优先遍历</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86"><span class="nav-text">2.2 广度优先遍历</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">3. 二叉树的定义</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-%E9%93%BE%E5%BC%8F%E5%AD%98%E5%82%A8"><span class="nav-text">3.1 链式存储</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#TL-DR"><span class="nav-text">TL;DR</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E7%A7%8D%E7%B1%BB"><span class="nav-text">1. 二叉树的种类</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-%E6%BB%A1%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="nav-text">1.1 满二叉树</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-%E5%AE%8C%E5%85%A8%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="nav-text">1.2 完全二叉树</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91"><span class="nav-text">1.3 二叉搜索树</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91"><span class="nav-text">1.4 平衡二叉搜索树</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%81%8D%E5%8E%86"><span class="nav-text">2. 二叉树的遍历</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86"><span class="nav-text">2.1 深度优先遍历</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86"><span class="nav-text">2.2 广度优先遍历</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="nav-text">3. 二叉树的定义</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-%E9%93%BE%E5%BC%8F%E5%AD%98%E5%82%A8"><span class="nav-text">3.1 链式存储</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -156,13 +157,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-count">10</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-count">13</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -255,8 +256,7 @@
     
     
     <div class="post-body" itemprop="articleBody"><span id="more"></span>
-<h1>TL;DR</h1>
-<p>二叉树是一种基础的数据结构. 本篇介绍了二叉树的种类、存储方式、遍历方式以及定义，比较全面的介绍了二叉树各个方面的重点.</p>
+<h1 id="TL-DR"><a href="#TL-DR" class="headerlink" title="TL;DR"></a>TL;DR</h1><p>二叉树是一种基础的数据结构. 本篇介绍了二叉树的种类、存储方式、遍历方式以及定义，比较全面的介绍了二叉树各个方面的重点. </p>
 <pre class="mermaid">graph LR;
 A("树") --- B("二叉树")
   B --- B1("完全二叉树") --- B11("满二叉树")
@@ -277,71 +277,51 @@ A("树") --- D("B树")
   D --- D1("B+树")
   D --- D2("B*树")
 A("树") --- E("字典树")</pre>
-<h1>1. 二叉树的种类</h1>
-<h2 id="1-1-满二叉树">1.1 满二叉树</h2>
-<ol>
-<li>概念<br>
-满二叉树是一种特殊的二叉树，其中每个节点都有0个或2个子节点。满二叉树的特点是所有叶子节点都在同一层，且每个非叶子节点都有两个子节点。满二叉树的高度为log2(n+1)，其中n是节点数。</li>
-</ol>
+
+<h1 id="1-二叉树的种类"><a href="#1-二叉树的种类" class="headerlink" title="1. 二叉树的种类"></a>1. 二叉树的种类</h1><h2 id="1-1-满二叉树"><a href="#1-1-满二叉树" class="headerlink" title="1.1 满二叉树"></a>1.1 满二叉树</h2><ol>
+<li><p>概念<br>满二叉树是一种特殊的二叉树，其中每个节点都有0个或2个子节点。满二叉树的特点是所有叶子节点都在同一层，且每个非叶子节点都有两个子节点。满二叉树的高度为log2(n+1)，其中n是节点数。</p>
 <blockquote>
 <p>即依次序排列从左到右，从上到下进行排列，每个节点都有两个子节点，直到最后一层的叶子节点。</p>
 </blockquote>
-<ol start="2">
-<li>特点</li>
+</li>
+<li><p>特点</p>
+</li>
 </ol>
-<h2 id="1-2-完全二叉树">1.2 完全二叉树</h2>
+<h2 id="1-2-完全二叉树"><a href="#1-2-完全二叉树" class="headerlink" title="1.2 完全二叉树"></a>1.2 完全二叉树</h2><ol>
+<li><p>概念<br>没有满的满二叉树</p>
+</li>
+<li><p>存储<br>完全二叉树可以使用数组来存储，数组的下标从0开始，根节点的下标为0，左子节点的下标为2i+1，右子节点的下标为2i+2，父节点的下标为(i-1)/2。 平常使用完全二叉树的时候, 可以使用数组来存储, 便于索引且空间利用率最高.</p>
+</li>
+<li><p>特殊例子 - 堆</p>
+</li>
+</ol>
+<h2 id="1-3-二叉搜索树"><a href="#1-3-二叉搜索树" class="headerlink" title="1.3 二叉搜索树"></a>1.3 二叉搜索树</h2><ol>
+<li>概念<br>二叉搜索树是一个有序树, 任意节点的左子树的值都小于该节点的值, 任意节点的右子树的值都大于该节点的值.</li>
+</ol>
 <ol>
-<li>
-<p>概念<br>
-没有满的满二叉树</p>
-</li>
-<li>
-<p>存储<br>
-完全二叉树可以使用数组来存储，数组的下标从0开始，根节点的下标为0，左子节点的下标为2i+1，右子节点的下标为2i+2，父节点的下标为(i-1)/2。 平常使用完全二叉树的时候, 可以使用数组来存储, 便于索引且空间利用率最高.</p>
-</li>
-<li>
-<p>特殊例子 - 堆</p>
-</li>
-</ol>
-<h2 id="1-3-二叉搜索树">1.3 二叉搜索树</h2>
+<li>题目<blockquote>
 <ol>
-<li>
-<p>概念<br>
-二叉搜索树是一个有序树, 任意节点的左子树的值都小于该节点的值, 任意节点的右子树的值都大于该节点的值.</p>
-</li>
-<li>
-<p>题目</p>
-</li>
-</ol>
-<blockquote>
-<ol start="700">
-<li>二叉搜索树中的搜索 - 给定一个二叉搜索树(Binary Search Tree)找到给定节点, 返回以该节点为根的子树. 如果节点不存在, 返回NULL.</li>
-</ol>
-</blockquote>
-<div class="tabs" id="二叉搜索树中的搜索"><ul class="nav-tabs"><li class="tab active"><a href="#二叉搜索树中的搜索-1">迭代法</a></li><li class="tab"><a href="#二叉搜索树中的搜索-2">递归法</a></li></ul><div class="tab-content"><div class="tab-pane active" id="二叉搜索树中的搜索-1"><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">TreeNode* <span class="title">searchBST</span><span class="params">(TreeNode* root, <span class="type">int</span> val)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">while</span> (root != <span class="literal">NULL</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (root-&gt;val &gt; val) root = root-&gt;left;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span> (root-&gt;val &lt; val) root = root-&gt;right;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">return</span> root;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<li>二叉搜索树中的搜索 - 给定一个二叉搜索树(Binary Search Tree)找到给定节点, 返回以该节点为根的子树. 如果节点不存在, 返回NULL.<div class="tabs" id="二叉搜索树中的搜索"><ul class="nav-tabs"><li class="tab active"><a href="#二叉搜索树中的搜索-1">迭代法</a></li><li class="tab"><a href="#二叉搜索树中的搜索-2">递归法</a></li></ul><div class="tab-content"><div class="tab-pane active" id="二叉搜索树中的搜索-1"><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">TreeNode* <span class="title">searchBST</span><span class="params">(TreeNode* root, <span class="type">int</span> val)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">while</span> (root != <span class="literal">NULL</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (root-&gt;val &gt; val) root = root-&gt;left;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span> (root-&gt;val &lt; val) root = root-&gt;right;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">return</span> root;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">searchBST</span>(<span class="params">self, root: TreeNode, val: <span class="built_in">int</span></span>) -&gt; TreeNode:</span><br><span class="line">        <span class="keyword">while</span> root:</span><br><span class="line">            <span class="keyword">if</span> root.val &gt; val:</span><br><span class="line">                root = root.left</span><br><span class="line">            <span class="keyword">elif</span> root.val &lt; val:</span><br><span class="line">                root = root.right</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">return</span> root</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span></span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="二叉搜索树中的搜索-2"><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">TreeNode* <span class="title">searchBST</span><span class="params">(TreeNode* root, <span class="type">int</span> val)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (root == <span class="literal">NULL</span> || root-&gt;val == val) <span class="keyword">return</span> root;</span><br><span class="line">    <span class="keyword">if</span> (root-&gt;val &gt; val) <span class="keyword">return</span> <span class="built_in">searchBST</span>(root-&gt;left, val);</span><br><span class="line">    <span class="keyword">if</span> (root-&gt;val &lt; val) <span class="keyword">return</span> <span class="built_in">searchBST</span>(root-&gt;right, val);</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">searchBST</span>(<span class="params">self, root: TreeNode, val: <span class="built_in">int</span></span>) -&gt; TreeNode:</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> root <span class="keyword">or</span> root.val == val:</span><br><span class="line">            <span class="keyword">return</span> root</span><br><span class="line">        <span class="keyword">if</span> root.val &gt; val:</span><br><span class="line">            <span class="keyword">return</span> self.searchBST(root.left, val)</span><br><span class="line">        <span class="keyword">if</span> root.val &lt; val:</span><br><span class="line">            <span class="keyword">return</span> self.searchBST(root.right, val)</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span></span><br></pre></td></tr></table></figure></div></div></div>
-<h2 id="1-4-平衡二叉搜索树">1.4 平衡二叉搜索树</h2>
-<ol>
-<li>概念<br>
-又被称为AVL（Adelson-Velsky and Landis）树，且具有以下性质：它是一棵空树或它的左右两个子树的高度差的绝对值不超过1，并且左右两个子树都是一棵平衡二叉树。</li>
+</li>
 </ol>
-<p><strong>2. C++中的容器</strong><br>
-「C++中map、set、multimap，multiset的底层实现都是平衡二叉搜索树」，所以map、set的增删操作时间时间复杂度是logn，注意我这里没有说unordered_map、unordered_set，unordered_map、unordered_map底层实现是哈希表。</p>
-<h1>2. 二叉树的遍历</h1>
-<h2 id="2-1-深度优先遍历">2.1 深度优先遍历</h2>
-<ol>
+</blockquote>
+</li>
+</ol>
+<h2 id="1-4-平衡二叉搜索树"><a href="#1-4-平衡二叉搜索树" class="headerlink" title="1.4 平衡二叉搜索树"></a>1.4 平衡二叉搜索树</h2><ol>
+<li>概念<br>又被称为AVL（Adelson-Velsky and Landis）树，且具有以下性质：它是一棵空树或它的左右两个子树的高度差的绝对值不超过1，并且左右两个子树都是一棵平衡二叉树。</li>
+</ol>
+<p><strong>2. C++中的容器</strong><br>「C++中map、set、multimap，multiset的底层实现都是平衡二叉搜索树」，所以map、set的增删操作时间时间复杂度是logn，注意我这里没有说unordered_map、unordered_set，unordered_map、unordered_map底层实现是哈希表。</p>
+<h1 id="2-二叉树的遍历"><a href="#2-二叉树的遍历" class="headerlink" title="2. 二叉树的遍历"></a>2. 二叉树的遍历</h1><h2 id="2-1-深度优先遍历"><a href="#2-1-深度优先遍历" class="headerlink" title="2.1 深度优先遍历"></a>2.1 深度优先遍历</h2><ol>
 <li>前序遍历(递归法,迭代法)</li>
 <li>中序遍历(递归法,迭代法)</li>
 <li>后序遍历(递归法,迭代法)</li>
 </ol>
-<h2 id="2-2-广度优先遍历">2.2 广度优先遍历</h2>
-<ol>
+<h2 id="2-2-广度优先遍历"><a href="#2-2-广度优先遍历" class="headerlink" title="2.2 广度优先遍历"></a>2.2 广度优先遍历</h2><ol>
 <li>层序遍历(迭代法)</li>
 </ol>
-<h1>3. 二叉树的定义</h1>
-<h2 id="3-1-链式存储">3.1 链式存储</h2>
-<div class="tabs" id="二叉树链式存储代码实现"><ul class="nav-tabs"><li class="tab active"><a href="#二叉树链式存储代码实现-1">cpp</a></li><li class="tab"><a href="#二叉树链式存储代码实现-2">python</a></li></ul><div class="tab-content"><div class="tab-pane active" id="二叉树链式存储代码实现-1"><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">TreeNode</span> &#123;</span><br><span class="line">    <span class="type">int</span> val;</span><br><span class="line">    TreeNode *left;</span><br><span class="line">    TreeNode *right;</span><br><span class="line">    <span class="built_in">TreeNode</span>(<span class="type">int</span> x) : <span class="built_in">val</span>(x), <span class="built_in">left</span>(<span class="literal">NULL</span>), <span class="built_in">right</span>(<span class="literal">NULL</span>) &#123;&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="二叉树链式存储代码实现-2"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">TreeNode</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, x</span>):</span><br><span class="line">        self.val = x</span><br><span class="line">        self.left = <span class="literal">None</span></span><br><span class="line">        self.right = <span class="literal">None</span></span><br></pre></td></tr></table></figure></div></div></div>
+<h1 id="3-二叉树的定义"><a href="#3-二叉树的定义" class="headerlink" title="3. 二叉树的定义"></a>3. 二叉树的定义</h1><h2 id="3-1-链式存储"><a href="#3-1-链式存储" class="headerlink" title="3.1 链式存储"></a>3.1 链式存储</h2><div class="tabs" id="二叉树链式存储代码实现"><ul class="nav-tabs"><li class="tab active"><a href="#二叉树链式存储代码实现-1">cpp</a></li><li class="tab"><a href="#二叉树链式存储代码实现-2">python</a></li></ul><div class="tab-content"><div class="tab-pane active" id="二叉树链式存储代码实现-1"><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">TreeNode</span> &#123;</span><br><span class="line">    <span class="type">int</span> val;</span><br><span class="line">    TreeNode *left;</span><br><span class="line">    TreeNode *right;</span><br><span class="line">    <span class="built_in">TreeNode</span>(<span class="type">int</span> x) : <span class="built_in">val</span>(x), <span class="built_in">left</span>(<span class="literal">NULL</span>), <span class="built_in">right</span>(<span class="literal">NULL</span>) &#123;&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="二叉树链式存储代码实现-2"><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">TreeNode</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, x</span>):</span><br><span class="line">        self.val = x</span><br><span class="line">        self.left = <span class="literal">None</span></span><br><span class="line">        self.right = <span class="literal">None</span></span><br></pre></td></tr></table></figure></div></div></div>
     </div>
 
     
@@ -408,7 +388,11 @@ A("树") --- E("字典树")</pre>
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.33/fancybox/fancybox.umd.js" integrity="sha256-+2+qOqR8CKoHh/AsVR9k2qaDBKWjYNC2nozhYmv5j9k=" crossorigin="anonymous"></script>
 <script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+<script src="/js/jquery.min.js"></script><script src="/js/code-unfold.js"></script>
+
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
 <script src="/js/third-party/search/local-search.js"></script>
@@ -418,6 +402,7 @@ A("树") --- E("字典树")</pre>
   <script src="/js/third-party/tags/mermaid.js"></script>
 
 
+  <script src="/js/third-party/fancybox.js"></script>
 
 
 

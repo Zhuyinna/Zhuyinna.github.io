@@ -57,6 +57,8 @@ NexT.boot.refresh = function() {
   NexT.utils.registerSidebarTOC();
   NexT.utils.registerPostReward();
   NexT.utils.registerVideoIframe();
+  // 代码折叠
+  codeUnfold();
 };
 
 NexT.boot.motion = function() {

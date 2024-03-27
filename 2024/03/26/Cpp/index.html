@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha256-wiz7ZSCn/btzhjKDQBms9Hx4sSeUYsDrTLg7roPstac=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.33/fancybox/fancybox.css" integrity="sha256-gkQVf8UKZgQ0HyuxL/VnacadJ+D2Kox2TCEBuNQg5+w=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"zhuyinna.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.19.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="C++">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C++学习">
+<meta property="og:url" content="http://zhuyinna.github.io/2024/03/26/Cpp/index.html">
+<meta property="og:site_name" content="Joys Blog">
+<meta property="og:description" content="C++">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://s2.loli.net/2024/03/26/x5GSmZoRq1wtHJf.png">
+<meta property="og:image" content="https://s2.loli.net/2024/03/26/7jq92XUCgW5VQZS.png">
+<meta property="article:published_time" content="2024-03-26T12:26:37.000Z">
+<meta property="article:modified_time" content="2024-03-26T17:56:11.176Z">
+<meta property="article:author" content="Joy Zhu">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2024/03/26/x5GSmZoRq1wtHJf.png">
+
+
+<link rel="canonical" href="http://zhuyinna.github.io/2024/03/26/Cpp/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://zhuyinna.github.io/2024/03/26/Cpp/","path":"2024/03/26/Cpp/","title":"C++学习"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>C++学习 | Joys Blog</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Joys Blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">subtitle</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95"><span class="nav-text">基础语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TODO"><span class="nav-text">TODO</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Joy Zhu"
+      src="/images/%E5%A4%B4%E5%83%8F2.jpg">
+  <p class="site-author-name" itemprop="name">Joy Zhu</p>
+  <div class="site-description" itemprop="description">Record of life, work, study, and thoughts</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://zhuyinna.github.io/2024/03/26/Cpp/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/%E5%A4%B4%E5%83%8F2.jpg">
+      <meta itemprop="name" content="Joy Zhu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joys Blog">
+      <meta itemprop="description" content="Record of life, work, study, and thoughts">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="C++学习 | Joys Blog">
+      <meta itemprop="description" content="C++">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          C++学习
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2024-03-26 20:26:37" itemprop="dateCreated datePublished" datetime="2024-03-26T20:26:37+08:00">2024-03-26</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2024-03-27 01:56:11" itemprop="dateModified" datetime="2024-03-27T01:56:11+08:00">2024-03-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80/" itemprop="url" rel="index"><span itemprop="name">计算机语言</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80/C/" itemprop="url" rel="index"><span itemprop="name">C++</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+            <div class="post-description">C++</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><span id="more"></span>
+<h2 id="基础语法"><a href="#基础语法" class="headerlink" title="基础语法"></a>基础语法</h2><hr>
+<p>变量类型</p>
+<ol>
+<li>字符: char</li>
+<li>浮点: float, double</li>
+<li>枚举: enum用于定义一组命名的整数常量</li>
+<li>数组: type[]或type[size]：用于表示具有相同类型的元素组成的数组</li>
+<li>结构体: struct：用于定义包含多个不同类型成员的结构</li>
+<li>共用体: union：用于定义一种特殊的数据类型，它可以在相同的内存位置存储不同的数据类型<br>!!!字符串: 有两种方式来表示字符串</li>
+</ol>
+<ul>
+<li>C风格字符串: <code>char str[] = "Hello"; char str[6] = {'H', 'e', 'l', 'l', 'o', '\0'};</code></li>
+<li>String类:<br>  C++标准库提供了string类类型，用于操作字符串: <code>#include &lt;string&gt;</code><br>  <code>string str = "Hello";</code></li>
+</ul>
+<hr>
+<p>变量修饰符</p>
+<ol>
+<li>static 存储类指示编译器在程序的生命周期内保持局部变量的存在，而不需要在每次它进入和离开作用域时进行创建和销毁。因此，使用 static 修饰局部变量可以在函数调用之间保持局部变量的值。<br>static如果用于class的成员变量，表示该成员变量是所有对象共享的，不会因为对象的不同而改变。</li>
+<li>extern 存储类用于提供一个全局变量的引用，全局变量对所有的程序文件都是可见的。当您使用 ‘extern’ 时，对于无法初始化的变量，会把变量名指向一个之前定义过的存储位置.</li>
+</ol>
+<hr>
+<p>数学运算符</p>
+<ol>
+<li>取模运算符: %，返回除法的余数</li>
+<li>除法运算符: /，返回除法的商 (整数除法只保留整数部分，不会四舍五入) </li>
+<li>自增自减: ++, —</li>
+<li>除法要得到小数: 除数或被除数有一个是浮点数</li>
+<li>逻辑运算符: &amp;&amp;, ||, !</li>
+<li>强制转换: int(2.2200)</li>
+<li>指针运算符: &amp;, *<blockquote>
+<p>取模%, 逻辑运算符, 自增减不同于python, 要注意</p>
+</blockquote>
+</li>
+</ol>
+<hr>
+<p>循环/条件</p>
+<ol>
+<li>if…else if….else</li>
+<li><code>#include&lt;string&gt;</code></li>
+<li><code>cout&lt;&lt;"str.size()"</code></li>
+</ol>
+<hr>
+<p>函数</p>
+<ol>
+<li>函数声明<br>参数的名称并不重要，只有参数的类型是必需的: int max(int, int);</li>
+<li>函数调用<br>传值: 略<br>传递指针:<br> <code>void swap(int *x, int *y); //声明</code><br> <code>void swap(int *x, int *y) { //定义}</code><br> <code>swap(&amp;a, &amp;b); //调用</code><br>传递引用:<br> <code>void swap(int &amp;x, int &amp;y); //声明</code><br> <code>void swap(int &amp;x, int &amp;y) { //定义}</code><br> <code>swap(a, b); //调用</code></li>
+</ol>
+<hr>
+<p>数组</p>
+<ol>
+<li>声明,初始化<br><code>type arrayName [ arraySize ];</code><br>必须指定数组的大小，数组的大小必须是一个大于零的整数常量，type可以是任意有效的数据类型<br><code>double balance[5] = {1000.0, 2.0, 3.4, 7.0, 50.0};</code><br><code>double balance[] = {1000.0, 2.0, 3.4, 7.0, 50.0};</code><br><code>balance[4] = 50.0; //创建含有4个元素的数组</code></li>
+<li>多维数组</li>
+</ol>
+<hr>
+<p>指针数组和数组指针</p>
+<p><font color="red">[]的优先级高于*</font></p>
+<ol>
+<li>概念<br>指针数组: int <em>p[5]; //p是一个数组，数组中的元素是指针<br>数组指针: int (</em>p)[5]; //p是一个指针，指向一个具有5个元素的数组</li>
+<li>二维数组指针的解引用<br>以二维数组a[2][3]={1, 2, 3, 4 ,5, 6};为例（第一维是行，第二维是列）<br>第一种：*(*a+1)————等价于a[0][1]，因为<em>的优先级比+高，所以先解引用，进入第二维在第二维里面地址+1，再次解引用得到元素值<br>第二种：\</em>(*(a+1))———等价于a[1][0]，比上面第一种多加了一个括号，括号优先级最高，先+1移动地址（注意是在第一维里面移动），然后解引用进入第二维，再解引用得到元素的值<br>第三种：*(&amp;a[0][0]+1)—等价于a[0][1]，这里使用了&amp;取地址符，将原本表示第一个元素的a[0][0]返回到第二个维度，然后第二维地址+1，再解引用得到元素的值</li>
+<li>举例<br><em>(a[1]+1)————表示的是a[1][1]的值<br>(</em>a+1)[1]————表示的是a[0][2]的值<br>第二个解析: 因为[]的优先级是比*高的所以这里的括号不能去掉，第一步先解引用进入第二维度(*优先级高于+），然后第二维地址+1，然后再在当前基础上再移动一次地址，最后解引用</li>
+<li>指向字符串数组的指针数组:<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span> *names[] = {</span><br><span class="line">   <span class="string">"Zara Ali"</span>,</span><br><span class="line">   <span class="string">"Hina Ali"</span>,</span><br><span class="line">   <span class="string">"Nuha Ali"</span>,</span><br><span class="line">   <span class="string">"Sara Ali"</span>,</span><br><span class="line">};</span><br><span class="line">cout &lt;&lt; names[<span class="number">0</span>] &lt;&lt; endl;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<hr>
+<ol>
+<li>引用<br>直接输出引用变量, 会输出引用变量的值<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> i = <span class="number">5</span></span><br><span class="line"><span class="type">int</span>&amp;    r = i;</span><br><span class="line">cout &lt;&lt; i &lt;&lt; r &lt;&lt; endl; <span class="comment">//输出两个5</span></span><br></pre></td></tr></table></figure>
+引用通常用于函数参数列表和函数返回值。</li>
+</ol>
+<hr>
+<ol>
+<li>结构体<br>成员访问运算符（.）<br>结构体的变量的赋值举例(字符串):<code>strcpy(book1.title, "C++ 教程");</code></li>
+<li>结构体指针<br>成员访问运算符（-&gt;）<br><code>struct_pointer-&gt;title;</code></li>
+<li>typedef关键字<br>创建别名: 可以直接使用 Books 来定义 Books 类型的变量，而不需要使用 struct 关键字<br><code>typedef struct Books { ... } Book;</code><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span> <span class="title class_">Books</span></span><br><span class="line">{</span><br><span class="line">   <span class="type">char</span>  title[<span class="number">50</span>];</span><br><span class="line">   <span class="type">char</span>  author[<span class="number">50</span>];</span><br><span class="line">   <span class="type">char</span>  subject[<span class="number">100</span>];</span><br><span class="line">   <span class="type">int</span>   book_id;</span><br><span class="line">}Books;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<hr>
+<p>类class</p>
+<ol>
+<li>私有的成员和受保护的成员不能使用直接成员访问运算符 (.) 来直接访问</li>
+<li>成员函数可以定义在类定义内部，或者单独使用范围解析运算符 :: 来定义。—— e.g. <code>double Box::getVolume(void)</code></li>
+<li>构造函数<br>类的构造函数是类的一种特殊的成员函数，它会在每次创建类的新对象时执行。<br>构造函数的名称与类的名称是完全相同的，并且不会返回任何类型，也不会返回 void。构造函数可用于为某些成员变量设置初始值。<br>使用初始化列表来初始化字段:<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">C::<span class="built_in">C</span>( <span class="type">double</span> a, <span class="type">double</span> b, <span class="type">double</span> c): <span class="built_in">X</span>(a), <span class="built_in">Y</span>(b), <span class="built_in">Z</span>(c)</span><br><span class="line">{</span><br><span class="line">  ....</span><br><span class="line">}</span><br></pre></td></tr></table></figure></li>
+<li>析构函数<br>类的析构函数是类的一种特殊的成员函数，它会在每次<strong>删除所创建的对象</strong>时执行。(delete)<br>析构函数的名称与类的名称是完全相同的，只是在前面加了个波浪号（~）作为前缀，它不会返回任何值，也不能带有任何参数。析构函数有助于在跳出程序（比如关闭文件、释放内存等）前释放资源。</li>
+</ol>
+<hr>
+<p>继承</p>
+<ol>
+<li>派生类可以访问基类中所有的非私有成员。因此基类成员如果不想被派生类的成员函数访问，则应在基类中声明为 private<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 派生类</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Rectangle</span>: <span class="keyword">public</span> Shape</span><br><span class="line">{</span><br><span class="line">   <span class="keyword">public</span>:</span><br><span class="line">      <span class="function"><span class="type">int</span> <span class="title">getArea</span><span class="params">()</span></span></span><br><span class="line"><span class="function">      </span>{ </span><br><span class="line">         <span class="keyword">return</span> (width * height); </span><br><span class="line">      }</span><br><span class="line">};</span><br></pre></td></tr></table></figure>
+<img src="https://s2.loli.net/2024/03/26/x5GSmZoRq1wtHJf.png" width="100%"></li>
+</ol>
+<ol>
+<li>一个派生类继承了所有的基类方法，但下列情况除外：<br>基类的构造函数、析构函数和拷贝构造函数。<br>基类的重载运算符。TODO: 查阅<br>基类的友元函数。TODO: 查阅</li>
+<li><p>继承类型<br><img src="https://s2.loli.net/2024/03/26/7jq92XUCgW5VQZS.png" width="100%"></p>
+</li>
+<li><p>多继承</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> &lt;派生类名&gt;:&lt;继承方式<span class="number">1</span>&gt;&lt;基类名<span class="number">1</span>&gt;,&lt;继承方式<span class="number">2</span>&gt;&lt;基类名<span class="number">2</span>&gt;,…</span><br><span class="line">{</span><br><span class="line">&lt;派生类类体&gt;</span><br><span class="line">};</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<hr>
+<p>重载<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 重载 + 运算符，用于把两个 Box 对象相加</span></span><br><span class="line">Box <span class="keyword">operator</span>+(<span class="type">const</span> Box&amp; b)</span><br><span class="line">{</span><br><span class="line">   Box box;</span><br><span class="line">   box.length = <span class="keyword">this</span>-&gt;length + b.length;</span><br><span class="line">   box.breadth = <span class="keyword">this</span>-&gt;breadth + b.breadth;</span><br><span class="line">   box.height = <span class="keyword">this</span>-&gt;height + b.height;</span><br><span class="line">   <span class="keyword">return</span> box;</span><br><span class="line">}</span><br></pre></td></tr></table></figure><br>TODO: 重载详细</p>
+<hr>
+<p>多态</p>
+<ol>
+<li>虚函数<br>需要在父类的调用函数之前加上virtual, 声明为虚函数. 如果不设置,静态多态，或静态链接 - 函数调用在程序执行前就准备好了。有时候这也被称为早绑定，因为调用函数在程序<strong>编译期间就已经设置好了</strong>. </li>
+<li>纯虚函数<br>您可能想要在基类中定义虚函数，以便在派生类中重新定义该函数更好地适用于对象，但是您在基类中又不能对虚函数给出有意义的实现，这个时候就会用到纯虚函数。<br><code>virtual int area() = 0;</code></li>
+</ol>
+<hr>
+<p>数据抽象<br>在 C++ 中，使用类来定义我们自己的抽象数据类型（ADT）<br>封装是面向对象编程中的把数据和操作数据的函数绑定在一起的一个概念，这样能避免受到外界的干扰和误用，从而确保了安全。<strong>数据封装</strong>引申出了另一个重要的 OOP 概念，即数据隐藏。</p>
+<p><strong>数据封装</strong>是一种把数据和操作数据的函数捆绑在一起的机制，<strong>数据抽象</strong>是一种仅向用户暴露接口而把具体的实现细节隐藏起来的机制。</p>
+<blockquote>
+<p>C++中, 虚函数可以为private, 并且可以被子类覆盖（因为虚函数表的传递），但子类不能调用父类的private虚函数。虚函数的重载性和它声明的权限无关。<br>一个成员函数被定义为private属性，标志着其只能被当前类的其他成员函数(或友元函数)所访问。而virtual修饰符则强调父类的成员函数可以在子类中被重写，因为重写之时并没有与父类发生任何的调用关系，故而重写是被允许的。<br>编译器不检查虚函数的各类属性。被virtual修饰的成员函数，不论他们是private、protect或是public的，都会被统一的放置到虚函数表中。对父类进行派生时，子类会继承到拥有相同偏移地址的虚函数表（相同偏移地址指，各虚函数相对于VPTR指针的偏移），则子类就会被允许对这些虚函数进行重载。且重载时可以给重载函数定义新的属性，例如public，其只标志着该重载函数在该子类中的访问属性为public，和父类的private属性没有任何关系！<br>纯虚函数可以设计成私有的，不过这样不允许在本类之外的非友元函数中直接调用它，子类中只有覆盖这种纯虚函数的义务，却没有调用它的权利。</p>
+</blockquote>
+<hr>
+<p>动态内存</p>
+<ol>
+<li>程序内存<br>栈：在函数内部声明的所有变量都将占用栈内存。<br>堆：这是程序中未使用的内存，在程序运行时可用于动态分配内存。</li>
+<li>动态分配值<br>new+delete<br>malloc() 函数在 C 语言中就出现了，在 C++ 中仍然存在，但建议尽量不要使用 malloc() 函数。new 与 malloc() 函数相比，其主要的优点是，new 不只是分配了内存，它还创建了对象。<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">double</span> *tmp = <span class="literal">NULL</span>;</span><br><span class="line">tmp = <span class="keyword">new</span> <span class="type">double</span>;</span><br></pre></td></tr></table></figure></li>
+<li><p>数组</p>
+<figure class="highlight cpp"><figcaption><span>基本用法</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> *p = <span class="literal">NULL</span>;</span><br><span class="line">p = <span class="keyword">new</span> <span class="type">int</span>[<span class="number">20</span>];</span><br><span class="line"><span class="keyword">delete</span> [] p; <span class="comment">//释放数组</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><figcaption><span>一维数组</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> *p = <span class="keyword">new</span> <span class="type">int</span>[<span class="number">10</span>];</span><br><span class="line"><span class="keyword">delete</span> [] p;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><figcaption><span>二维数组: 3行4列</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> **p = <span class="keyword">new</span> <span class="type">int</span>*[<span class="number">3</span>];</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">10</span>; i++)</span><br><span class="line">{</span><br><span class="line">   p[i] = <span class="keyword">new</span> <span class="type">int</span>[<span class="number">4</span>];</span><br><span class="line">}</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;<span class="number">3</span>; i++)</span><br><span class="line">{</span><br><span class="line">   <span class="keyword">delete</span> [] p[i];</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>类</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Box</span></span><br><span class="line">{</span><br><span class="line">   <span class="keyword">public</span>:</span><br><span class="line">      <span class="built_in">Box</span>() { </span><br><span class="line">         cout &lt;&lt; <span class="string">"调用构造函数！"</span> &lt;&lt;endl; </span><br><span class="line">      }</span><br><span class="line">      ~<span class="built_in">Box</span>() { </span><br><span class="line">         cout &lt;&lt; <span class="string">"调用析构函数！"</span> &lt;&lt;endl; </span><br><span class="line">      }</span><br><span class="line">};</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">( )</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">   Box* myBoxArray = <span class="keyword">new</span> Box[<span class="number">4</span>];</span><br><span class="line"> </span><br><span class="line">   <span class="keyword">delete</span> [] myBoxArray; <span class="comment">// 删除数组</span></span><br><span class="line">   <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<hr>
+<h2 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h2><ul>
+<li>[ ] C++11新特性</li>
+<li>[ ] 调用函数传递数组参数时, 是否需要写方括号以及数组大小</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2024/03/26/latex%E8%AF%AD%E6%B3%95/" rel="prev" title="latex语法">
+                  <i class="fa fa-angle-left"></i> latex语法
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-pencil"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Joy Zhu</span>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.33/fancybox/fancybox.umd.js" integrity="sha256-+2+qOqR8CKoHh/AsVR9k2qaDBKWjYNC2nozhYmv5j9k=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+<script src="/js/jquery.min.js"></script><script src="/js/code-unfold.js"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"default","dark":"dark"},"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.7.0/mermaid.min.js","integrity":"sha256-TtLOdUA8mstPoO6sGvHIGx2ceXrrX4KgIItO06XOn8A="}}</script>
+  <script src="/js/third-party/tags/mermaid.js"></script>
+
+
+  <script src="/js/third-party/fancybox.js"></script>
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>

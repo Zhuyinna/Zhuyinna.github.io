@@ -17,6 +17,7 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha256-wiz7ZSCn/btzhjKDQBms9Hx4sSeUYsDrTLg7roPstac=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.33/fancybox/fancybox.css" integrity="sha256-gkQVf8UKZgQ0HyuxL/VnacadJ+D2Kox2TCEBuNQg5+w=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"zhuyinna.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.19.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
@@ -141,7 +142,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">TL;DR</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">1. 动规五部曲</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">2. 题目</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-509-%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0"><span class="nav-text">2.1 509-斐波那契数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-70-%E7%88%AC%E6%A5%BC%E6%A2%AF"><span class="nav-text">2.2 70-爬楼梯</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-746-%E4%BD%BF%E7%94%A8%E6%9C%80%E5%B0%8F%E8%8A%B1%E8%B4%B9%E7%88%AC%E6%A5%BC%E6%A2%AF"><span class="nav-text">2.3 746-使用最小花费爬楼梯</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-62-%E4%B8%8D%E5%90%8C%E8%B7%AF%E5%BE%84"><span class="nav-text">2.4 62-不同路径</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-5-63-%E4%B8%8D%E5%90%8C%E8%B7%AF%E5%BE%84II"><span class="nav-text">2.5 63-不同路径II</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-6-343-%E6%95%B4%E6%95%B0%E6%8B%86%E5%88%86"><span class="nav-text">2.6 343-整数拆分</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#96-%E4%B8%8D%E5%90%8C%E7%9A%84%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91"><span class="nav-text">96-不同的二叉搜索树</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#TL-DR"><span class="nav-text">TL;DR</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E5%8A%A8%E8%A7%84%E4%BA%94%E9%83%A8%E6%9B%B2"><span class="nav-text">1. 动规五部曲</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E9%A2%98%E7%9B%AE"><span class="nav-text">2. 题目</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-509-%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0"><span class="nav-text">2.1 509-斐波那契数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-70-%E7%88%AC%E6%A5%BC%E6%A2%AF"><span class="nav-text">2.2 70-爬楼梯</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-746-%E4%BD%BF%E7%94%A8%E6%9C%80%E5%B0%8F%E8%8A%B1%E8%B4%B9%E7%88%AC%E6%A5%BC%E6%A2%AF"><span class="nav-text">2.3 746-使用最小花费爬楼梯</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-62-%E4%B8%8D%E5%90%8C%E8%B7%AF%E5%BE%84"><span class="nav-text">2.4 62-不同路径</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-5-63-%E4%B8%8D%E5%90%8C%E8%B7%AF%E5%BE%84II"><span class="nav-text">2.5 63-不同路径II</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-6-343-%E6%95%B4%E6%95%B0%E6%8B%86%E5%88%86"><span class="nav-text">2.6 343-整数拆分</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#96-%E4%B8%8D%E5%90%8C%E7%9A%84%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91"><span class="nav-text">96-不同的二叉搜索树</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -156,13 +157,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-count">10</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-count">13</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -261,109 +262,62 @@
     
     
     <div class="post-body" itemprop="articleBody"><span id="more"></span>
-<h1>TL;DR</h1>
-<p>动态规划（Dynamic Programming，DP）是一种在数学、计算机科学和经济学中使用的，通过把原问题分解为相对简单的子问题的方式求解复杂问题的方法。动态规划常常适用于有重叠子问题和最优子结构性质的问题，动态规划方法通常用于求解最优化问题。</p>
-<h1>1. 动规五部曲</h1>
-<ol>
+<h1 id="TL-DR"><a href="#TL-DR" class="headerlink" title="TL;DR"></a>TL;DR</h1><p>动态规划（Dynamic Programming，DP）是一种在数学、计算机科学和经济学中使用的，通过把原问题分解为相对简单的子问题的方式求解复杂问题的方法。动态规划常常适用于有重叠子问题和最优子结构性质的问题，动态规划方法通常用于求解最优化问题。</p>
+<h1 id="1-动规五部曲"><a href="#1-动规五部曲" class="headerlink" title="1. 动规五部曲"></a>1. 动规五部曲</h1><ol>
 <li>确定dp数组（dp table）以及下标的含义</li>
 <li>确定递推公式</li>
 <li>dp数组如何初始化</li>
 <li>确定遍历顺序</li>
 <li>举例推导dp数组</li>
 </ol>
-<h1>2. 题目</h1>
-<h2 id="2-1-509-斐波那契数">2.1 509-斐波那契数</h2>
-<p>leetcode题目链接 - <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/fibonacci-number/">509. 斐波那契数</a></p>
+<h1 id="2-题目"><a href="#2-题目" class="headerlink" title="2. 题目"></a>2. 题目</h1><h2 id="2-1-509-斐波那契数"><a href="#2-1-509-斐波那契数" class="headerlink" title="2.1 509-斐波那契数"></a>2.1 509-斐波那契数</h2><p>leetcode题目链接 - <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/fibonacci-number/">509. 斐波那契数</a></p>
 <ol>
-<li>dp数组以及下标的含义<br>
-dp[i]的定义为：第i个斐波那契数的值为dp[i]</li>
-<li>递推公式<br>
-dp[i] = dp[i-1] + dp[i-2]</li>
-<li>dp数组初始化<br>
-dp[0] = 0, dp[1] = 1</li>
-<li>遍历顺序<br>
-从前往后遍历</li>
+<li>dp数组以及下标的含义<br>dp[i]的定义为：第i个斐波那契数的值为dp[i]</li>
+<li>递推公式<br>dp[i] = dp[i-1] + dp[i-2]</li>
+<li>dp数组初始化<br>dp[0] = 0, dp[1] = 1</li>
+<li>遍历顺序<br>从前往后遍历</li>
 <li>举例推导dp数组</li>
 </ol>
-<h2 id="2-2-70-爬楼梯">2.2 70-爬楼梯</h2>
-<p>leetcode题目链接 - <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/climbing-stairs/">70. 爬楼梯</a></p>
+<h2 id="2-2-70-爬楼梯"><a href="#2-2-70-爬楼梯" class="headerlink" title="2.2 70-爬楼梯"></a>2.2 70-爬楼梯</h2><p>leetcode题目链接 - <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/climbing-stairs/">70. 爬楼梯</a></p>
 <ol>
-<li>dp数组以及下标的含义<br>
-dp[i]的定义为：爬到第i阶楼梯的方法数为dp[i]</li>
-<li>递推公式<br>
-从i-1到达i + 从i-2到达i,<br>
-dp[i] = dp[i-1] + dp[i-2]</li>
-<li>dp数组初始化<br>
-注意题目中强调n为正整数,所以不用考虑0<br>
-dp[1] = 1, dp[2] = 2</li>
-<li>遍历顺序<br>
-从前往后遍历</li>
-<li>举例推导dp数组<br>
-1, 1, 2, 3…</li>
+<li>dp数组以及下标的含义<br>dp[i]的定义为：爬到第i阶楼梯的方法数为dp[i]</li>
+<li>递推公式<br>从i-1到达i + 从i-2到达i,<br>dp[i] = dp[i-1] + dp[i-2]</li>
+<li>dp数组初始化<br>注意题目中强调n为正整数,所以不用考虑0<br>dp[1] = 1, dp[2] = 2</li>
+<li>遍历顺序<br>从前往后遍历</li>
+<li>举例推导dp数组<br>1, 1, 2, 3…</li>
 </ol>
-<h2 id="2-3-746-使用最小花费爬楼梯">2.3 746-使用最小花费爬楼梯</h2>
-<p>leetcode题目链接 - <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/min-cost-climbing-stairs/">746. 使用最小花费爬楼梯</a></p>
+<h2 id="2-3-746-使用最小花费爬楼梯"><a href="#2-3-746-使用最小花费爬楼梯" class="headerlink" title="2.3 746-使用最小花费爬楼梯"></a>2.3 746-使用最小花费爬楼梯</h2><p>leetcode题目链接 - <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/min-cost-climbing-stairs/">746. 使用最小花费爬楼梯</a></p>
 <ol>
-<li>dp数组以及下标的含义<br>
-dp[i]定义为到达i台阶最小花费</li>
-<li>递推公式<br>
-假设一踩到台阶,就会耗费体力. 这里cost[i-1]原因是: dp数组从1开始, cost数组从0开始<br>
-dp[i] = min(dp[i-1], dp[i-2]) + cost[i-1]<br>
-return值:注意这里<code>return min(dp[n],dp[n-1])</code></li>
-<li>dp数组初始化<br>
-dp[0] = 0, dp[1] = cost[0]</li>
-<li>遍历顺序<br>
-从前往后遍历</li>
+<li>dp数组以及下标的含义<br>dp[i]定义为到达i台阶最小花费</li>
+<li>递推公式<br>假设一踩到台阶,就会耗费体力. 这里cost[i-1]原因是: dp数组从1开始, cost数组从0开始<br>dp[i] = min(dp[i-1], dp[i-2]) + cost[i-1]<br>return值:注意这里<code>return min(dp[n],dp[n-1])</code></li>
+<li>dp数组初始化<br>dp[0] = 0, dp[1] = cost[0]</li>
+<li>遍历顺序<br>从前往后遍历</li>
 </ol>
-<h2 id="2-4-62-不同路径">2.4 62-不同路径</h2>
-<p>leetcode题目链接 - <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/unique-paths/">62. 不同路径</a></p>
+<h2 id="2-4-62-不同路径"><a href="#2-4-62-不同路径" class="headerlink" title="2.4 62-不同路径"></a>2.4 62-不同路径</h2><p>leetcode题目链接 - <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/unique-paths/">62. 不同路径</a></p>
 <ol>
-<li>dp数组以及下标的含义<br>
-dp[i][j]的定义为：到达坐标(i,j)的路径数为dp[i][j]</li>
-<li>递推公式<br>
-<code>dp[i][j] = dp[i-1][j] + dp[i][j-1]</code></li>
-<li>dp数组初始化<br>
-<code>dp[0][j] = 1, dp[i][0] = 1</code></li>
-<li>遍历顺序<br>
-i:1-&gt;m, j:1-&gt;n</li>
+<li>dp数组以及下标的含义<br>dp[i][j]的定义为：到达坐标(i,j)的路径数为dp[i][j]</li>
+<li>递推公式<br><code>dp[i][j] = dp[i-1][j] + dp[i][j-1]</code></li>
+<li>dp数组初始化<br><code>dp[0][j] = 1, dp[i][0] = 1</code></li>
+<li>遍历顺序<br>i:1-&gt;m, j:1-&gt;n</li>
 </ol>
-<h2 id="2-5-63-不同路径II">2.5 63-不同路径II</h2>
-<p>leetcode题目链接 - <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/unique-paths-ii/">63. 不同路径 II</a><br>
-和62题类似,只是加了障碍物,不同点:</p>
+<h2 id="2-5-63-不同路径II"><a href="#2-5-63-不同路径II" class="headerlink" title="2.5 63-不同路径II"></a>2.5 63-不同路径II</h2><p>leetcode题目链接 - <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/unique-paths-ii/">63. 不同路径 II</a><br>和62题类似,只是加了障碍物,不同点:</p>
 <ol>
-<li>初始化<br>
-dp[0][j] = 1, dp[i][0] = 1, 如果遇到障碍物,则后面的都是0</li>
-<li>递推公式<br>
-和62题一样,只是加了障碍物判断: 如果是障碍物,则dp[i][j] = 0</li>
+<li>初始化<br>dp[0][j] = 1, dp[i][0] = 1, 如果遇到障碍物,则后面的都是0</li>
+<li>递推公式<br>和62题一样,只是加了障碍物判断: 如果是障碍物,则dp[i][j] = 0</li>
 </ol>
-<h2 id="2-6-343-整数拆分">2.6 343-整数拆分</h2>
-<p>leetcode题目链接 - <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/integer-break/">343. 整数拆分</a></p>
+<h2 id="2-6-343-整数拆分"><a href="#2-6-343-整数拆分" class="headerlink" title="2.6 343-整数拆分"></a>2.6 343-整数拆分</h2><p>leetcode题目链接 - <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/integer-break/">343. 整数拆分</a></p>
 <ol>
-<li>dp数组以及下标的含义<br>
-dp[i]的定义为：整数i拆分后的最大乘积为dp[i]</li>
-<li>递推公式<br>
-不拆分dp[i]/拆分成两部分j和i-j,其中i-j可以继续拆分或者不拆分<br>
-dp[i] = max(dp[i], max(j<em>dp[i-j],j</em>(i-j)))</li>
-<li>dp数组初始化<br>
-dp[2] = 1</li>
-<li>遍历顺序<br>
-i:[2,n], j:[1,i-1]</li>
+<li>dp数组以及下标的含义<br>dp[i]的定义为：整数i拆分后的最大乘积为dp[i]</li>
+<li>递推公式<br>不拆分dp[i]/拆分成两部分j和i-j,其中i-j可以继续拆分或者不拆分<br>dp[i] = max(dp[i], max(j<em>dp[i-j],j</em>(i-j)))</li>
+<li>dp数组初始化<br>dp[2] = 1</li>
+<li>遍历顺序<br>i:[2,n], j:[1,i-1]</li>
 </ol>
-<h2 id="96-不同的二叉搜索树">96-不同的二叉搜索树</h2>
-<p>leetcode题目链接 - <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/unique-binary-search-trees/">96. 不同的二叉搜索树</a></p>
+<h2 id="96-不同的二叉搜索树"><a href="#96-不同的二叉搜索树" class="headerlink" title="96-不同的二叉搜索树"></a>96-不同的二叉搜索树</h2><p>leetcode题目链接 - <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/unique-binary-search-trees/">96. 不同的二叉搜索树</a></p>
 <ol>
-<li>dp数组以及下标的含义<br>
-i为根节点,dp[i]为以i为根节点的二叉搜索树的个数</li>
-<li>递推公式<br>
-dp[i]表示总共有i个节点,有几个树. 其中j作为根节点时,左子树有j-1个节点,右子树有i-j个节点, j需要从1到i遍历</li>
-</ol>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,n+<span class="number">1</span>):</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,i+<span class="number">1</span>):</span><br><span class="line">        dp[i] += dp[j-<span class="number">1</span>]*dp[i-j]</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>dp数组初始化<br>
-注意这里虽然n不会是0,但是考虑到后面是左右子树如果一颗空树的时候,不能乘以0,所以必须改成1<br>
-dp[0]=1, dp[1]=1, dp[2]=2</li>
-<li>遍历顺序<br>
-i:[1,n]</li>
+<li>dp数组以及下标的含义<br>i为根节点,dp[i]为以i为根节点的二叉搜索树的个数</li>
+<li>递推公式<br>dp[i]表示总共有i个节点,有几个树. 其中j作为根节点时,左子树有j-1个节点,右子树有i-j个节点, j需要从1到i遍历<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,n+<span class="number">1</span>):</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,i+<span class="number">1</span>):</span><br><span class="line">        dp[i] += dp[j-<span class="number">1</span>]*dp[i-j]</span><br></pre></td></tr></table></figure></li>
+<li>dp数组初始化<br>注意这里虽然n不会是0,但是考虑到后面是左右子树如果一颗空树的时候,不能乘以0,所以必须改成1<br>dp[0]=1, dp[1]=1, dp[2]=2</li>
+<li>遍历顺序<br>i:[1,n]</li>
 </ol>
 
     </div>
@@ -432,7 +386,11 @@ i:[1,n]</li>
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.33/fancybox/fancybox.umd.js" integrity="sha256-+2+qOqR8CKoHh/AsVR9k2qaDBKWjYNC2nozhYmv5j9k=" crossorigin="anonymous"></script>
 <script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+<script src="/js/jquery.min.js"></script><script src="/js/code-unfold.js"></script>
+
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
 <script src="/js/third-party/search/local-search.js"></script>
@@ -442,6 +400,7 @@ i:[1,n]</li>
   <script src="/js/third-party/tags/mermaid.js"></script>
 
 
+  <script src="/js/third-party/fancybox.js"></script>
 
 
 
