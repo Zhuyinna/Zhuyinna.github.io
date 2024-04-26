@@ -21,25 +21,93 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"zhuyinna.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.19.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Record of life, work, study, and thoughts">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Joys Blog">
-<meta property="og:url" content="http://zhuyinna.github.io/index.html">
+    <meta name="description" content="[TOC] 一、机器学习相关 1、基本概念   [x] 1-1  简述解决一个机器学习问题时，你的流程是怎样的？   [x] 1-2  损失函数是什么，如何定义合理的损失函数？   [ ] 1-3  回归模型和分类模型常用损失函数有哪些？各有什么优缺点   [ ] 1-4  什么是结构误差和经验误差？训练模型的时候如何判断已经达到最优？   [ ] 1-5  模型的“泛化”能力是指？如何提升模型泛">
+<meta property="og:type" content="article">
+<meta property="og:title" content="机器学习面试题">
+<meta property="og:url" content="http://zhuyinna.github.io/2024/04/26/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E9%9D%A2%E8%AF%95%E9%A2%98/index.html">
 <meta property="og:site_name" content="Joys Blog">
-<meta property="og:description" content="Record of life, work, study, and thoughts">
+<meta property="og:description" content="[TOC] 一、机器学习相关 1、基本概念   [x] 1-1  简述解决一个机器学习问题时，你的流程是怎样的？   [x] 1-2  损失函数是什么，如何定义合理的损失函数？   [ ] 1-3  回归模型和分类模型常用损失函数有哪些？各有什么优缺点   [ ] 1-4  什么是结构误差和经验误差？训练模型的时候如何判断已经达到最优？   [ ] 1-5  模型的“泛化”能力是指？如何提升模型泛">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://img-blog.csdn.net/20150924153157802">
+<meta property="og:image" content="https://cdn.mathpix.com/snip/images/rv5TPf1dji2f0doz4esbVK6DVFzh_Wq_DRR1WuHx-8E.original.fullsize.png">
+<meta property="og:image" content="https://cdn.mathpix.com/snip/images/PrjtgHzrAnxkK7WaW34XPUtYjncLA7sXTfJACo5E-Uw.original.fullsize.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/zhengjingwei/image-bed/master/kdtree-1.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/zhengjingwei/image-bed/master/kdtree-2.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/zhengjingwei/image-bed/master/kdtree-3.jpg">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1385318-0c8849c769c7cae3?imageMogr2/auto-orient/strip%7CimageView2/2/w/291/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1385318-2443a8f4fea70ee7?imageMogr2/auto-orient/strip%7CimageView2/2/w/137/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1385318-fbf05fdf34f5fdd5?imageMogr2/auto-orient/strip%7CimageView2/2/w/385/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1385318-f7280559286d0abc?imageMogr2/auto-orient/strip%7CimageView2/2/w/526/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1385318-101318b723db87f3?imageMogr2/auto-orient/strip%7CimageView2/2/w/490/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1385318-d3e418e1bef50305?imageMogr2/auto-orient/strip%7CimageView2/2/w/529/format/webp">
+<meta property="og:image" content="https://img-blog.csdn.net/20180630161619869?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Byb2dyYW1fZGV2ZWxvcGVy/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=J%28W%29">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=g%28w%29">
+<meta property="og:image" content="https://pic4.zhimg.com/v2-e19781ffa33cc60608fad3fa60d5769f_b.jpg">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Ctext%7BNMI%7D%28%5COmega%2C+C%29+%3D+%5Cfrac%7BI%28%5COmega%3B+C%29%7D%7B%28H%28%5COmega%29%2BH%28C%29%2F2%29%7D%5C%5C">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=I">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=+%5Clog">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Cbegin%7Bsplit%7D+I%28%5COmega%3B+C%29+%26%3D%5Csum_%7Bk%7D%5Csum_%7Bj%7DP%28w_k+%5Ccap+c_j%29%5Clog+%5Cfrac%7BP%28w_k+%5Ccap+c_j%29%7D%7BP%28w_k%29P%28c_j%29%7D%5C%5C+%26%3D+%5Csum_%7Bk%7D%5Csum_%7Bj%7D%5Cfrac%7B%7Cw_k+%5Ccap+c_j%7C%7D%7BN%7D%5Clog+%5Cfrac%7BN%7Cw_k+%5Ccap+c_j%7C%7D%7B%7Cw_k%7C%7Cc_j%7C%7D+%5Cend%7Bsplit%7D%5C%5C">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=P%28w_k%29%2CP%28c_j%29%2CP%28w_k+%5Ccap+c_j%29+">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=w_k">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=c_j">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Cbegin%7Bsplit%7D+H%28%5COmega%29+%26%3D+-%5Csum_%7Bk%7DP%28w_k%29%5Clog+P%28w_k%29%5C%5C+%26%3D+-%5Csum_%7Bk%7D+%5Cfrac%7B%7Cw_k%7C%7D%7BN%7D%5Clog+%5Cfrac%7B%7Cw_k%7C%7D%7BN%7D+%5Cend%7Bsplit%7D%5C%5C">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=I%28%5COmega%3B+C%29">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=C">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5COmega">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=I%28%5COmega%3B+C%29+%3D+H%28%5COmega%29+-+H%28%5COmega+%7C+C%29%5C%5C">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=N%28N-1%29%2F2">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=RI+%3D+%5Cfrac%7BTP%2BTN%7D%7BTP%2BFP%2BTF%2BFN%7D%3D%5Cfrac%7BTP%2BTN%7D%7BC%5E%7B2%7D_%7BN%7D%7D%5C%5C">
+<meta property="og:image" content="https://cdn.mathpix.com/snip/images/lch_19BxC77kvBQ20p3no_Z71liDpIIAvdPnxoYWoYA.original.fullsize.png">
+<meta property="og:image" content="c:%5CUsers%5CKevin%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1567511107747.png">
+<meta property="og:image" content="https://cdn.mathpix.com/snip/images/3nV904o42ao1MH6C2EGrKbM59gU5lXNzzy5TFJ5Le_w.original.fullsize.png">
+<meta property="og:image" content="https://pic2.zhimg.com/v2-79e9feb7ee38f64c6cc15c501327b7bd_b.jpg">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/42741-dd3d241fa44a71c0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=r_t">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=z_t">
+<meta property="og:image" content="http://huaxiaozhuan.com/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/imgs/dl_rnn/decoder_encoder.jpg">
+<meta property="og:image" content="http://huaxiaozhuan.com/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/imgs/dl_rnn/attention.jpg">
+<meta property="og:image" content="c:%5CUsers%5CKevin%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1566132296775.png">
+<meta property="og:image" content="https://cdn.mathpix.com/snip/images/kLGt8ZRlTjA0PT7LYTuqIC2-ePp9Eh30KX5HANtYs4o.original.fullsize.png">
+<meta property="og:image" content="https://cdn.mathpix.com/snip/images/XOmA-zH1pvODDFxVhIO99BFDrSBP_MyM2xjKywDNnyo.original.fullsize.png">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/17477516-8ef0e22accfffd33.png?imageMogr2/auto-orient/">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/42741-0f80ad5540ea27f9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp">
+<meta property="og:image" content="https://colah.github.io/posts/2015-08-Understanding-LSTMs/img/LSTM3-var-tied.png">
+<meta property="og:image" content="https://www.hrwhisper.me/wp-content/uploads/2018/07/XGBoost-sparsity-aware-split-finding.png">
+<meta property="og:image" content="https://www.hrwhisper.me/wp-content/uploads/2018/07/LightGBM-VS-XGBoost.png">
+<meta property="og:image" content="https://www.hrwhisper.me/wp-content/uploads/2018/07/LightGBM-level-wise-tree-growth.png">
+<meta property="og:image" content="https://www.hrwhisper.me/wp-content/uploads/2018/07/LightGBM-leaf-wise-tree-growth.png">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=w_j%5E%2A+%3D+-+%5Cfrac+%7BG_j%7D+%7BH_j+%2B+%5Clambda%7D+%5Cquad+Obj+%3D+-+%5Cfrac+1+2+%5Csum_%7Bj%3D1%7D%5ET+%5Cfrac+%7BG_j%5E2%7D+%7BH_j+%2B+%5Clambda%7D+%2B+%5Cgamma+T">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Capprox">
+<meta property="og:image" content="https://awps-assets.meituan.net/mit-x/blog-images-bundle-2017/8635ca29.png">
+<meta property="og:image" content="https://awps-assets.meituan.net/mit-x/blog-images-bundle-2017/85ae2260.png">
+<meta property="og:image" content="https://awps-assets.meituan.net/mit-x/blog-images-bundle-2017/2882eb3a.png">
+<meta property="og:image" content="https://awps-assets.meituan.net/mit-x/blog-images-bundle-2017/9feeba61.png">
+<meta property="og:image" content="https://awps-assets.meituan.net/mit-x/blog-images-bundle-2017/6720fe17.png">
+<meta property="og:image" content="https://awps-assets.meituan.net/mit-x/blog-images-bundle-2017/3d8c74bf.png">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=x_1%2C+x_2%2C+...%2C+x_n+">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=X+%3D+%28x_1%2C+x_2%2C+...%2C+x_n%29">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Ctheta">
+<meta property="og:image" content="https://pic3.zhimg.com/v2-72984f949719a9ac476dfdbaa90bb046_b.jpg">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Ctheta">
+<meta property="og:image" content="https://pic2.zhimg.com/v2-356eca57f5aa3911dd6e00c0e053f21d_b.jpg">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=-+%5Clog+P%28%5Ctheta%29">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=MAP%28%5Ctheta%29%5Capprox+MLE%28%5Ctheta%29%2BP%28%5Ctheta%29">
+<meta property="article:published_time" content="2024-04-26T09:17:33.000Z">
+<meta property="article:modified_time" content="2024-04-26T09:17:42.004Z">
 <meta property="article:author" content="Joy Zhu">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdn.net/20150924153157802">
 
 
-<link rel="canonical" href="http://zhuyinna.github.io/">
+<link rel="canonical" href="http://zhuyinna.github.io/2024/04/26/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E9%9D%A2%E8%AF%95%E9%A2%98/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"en","comments":"","permalink":"","path":"index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://zhuyinna.github.io/2024/04/26/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E9%9D%A2%E8%AF%95%E9%A2%98/","path":"2024/04/26/机器学习面试题/","title":"机器学习面试题"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Joys Blog - subtitle</title>
+<title>机器学习面试题 | Joys Blog</title>
   
 
 
@@ -184,7 +252,7 @@ mjx-container[display="true"] + br {
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">Joys Blog</h1>
+      <p class="site-title">Joys Blog</p>
       <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">subtitle</p>
@@ -238,7 +306,7 @@ mjx-container[display="true"] + br {
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -251,6 +319,13 @@ mjx-container[display="true"] + br {
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">一、机器学习相关</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-text">1、基本概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81%E7%BB%8F%E5%85%B8%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0"><span class="nav-text">2、经典机器学习</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%B9%E5%BE%81%E5%B7%A5%E7%A8%8B"><span class="nav-text">特征工程</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">解答</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9B%B8%E5%85%B3"><span class="nav-text">一、机器学习相关</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5-2"><span class="nav-text">1、基本概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81%E7%BB%8F%E5%85%B8%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-2"><span class="nav-text">2、经典机器学习</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%B9%E5%BE%81%E5%B7%A5%E7%A8%8B-2"><span class="nav-text">特征工程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86%E5%92%8C%E6%8E%A8%E5%AF%BC"><span class="nav-text">基础算法原理和推导</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#KNN"><span class="nav-text">KNN</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%9C%BA"><span class="nav-text">支持向量机</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%E6%A8%A1%E5%9E%8B"><span class="nav-text">朴素贝叶斯模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92"><span class="nav-text">线性回归</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92"><span class="nav-text">逻辑回归</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">如果一个样本只对应于一个标签（多分类问题）：
+假设每个样本属于不同标签的概率服从几何分布，使用softmax regression进行分类：
+$$
+h_\theta &#x3D;
+\left[
+
+\right]</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#FM%E6%A8%A1%E5%9E%8B"><span class="nav-text">FM模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%86%B3%E7%AD%96%E6%A0%91"><span class="nav-text">决策树</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97%EF%BC%88RF%EF%BC%89"><span class="nav-text">随机森林（RF）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#GBDT"><span class="nav-text">GBDT</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#k-means"><span class="nav-text">k-means</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#PCA%E9%99%8D%E7%BB%B4"><span class="nav-text">PCA降维</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E3%80%81-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0"><span class="nav-text">3、 深度学习</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#DNN"><span class="nav-text">DNN</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CNN"><span class="nav-text">CNN</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#RNN"><span class="nav-text">RNN</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4%E3%80%81-%E5%9F%BA%E7%A1%80%E5%B7%A5%E5%85%B7"><span class="nav-text">4、 基础工具</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Spark"><span class="nav-text">Spark</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Xgboost"><span class="nav-text">Xgboost</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Tensorflow"><span class="nav-text">Tensorflow</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5%E3%80%81%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F"><span class="nav-text">5、推荐系统</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-text">二、数学相关</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#6%E3%80%81-%E6%A6%82%E7%8E%87%E8%AE%BA%E5%92%8C%E7%BB%9F%E8%AE%A1%E5%AD%A6"><span class="nav-text">6、 概率论和统计学</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MLE%E4%B8%8EMAP%E7%9A%84%E8%81%94%E7%B3%BB"><span class="nav-text">MLE与MAP的联系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7%E3%80%81-%E6%9C%80%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98"><span class="nav-text">7、 最优化问题</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -292,16 +367,17 @@ mjx-container[display="true"] + br {
 
     </div>
 
-    <div class="main-inner index posts-expand">
+    <div class="main-inner post posts-expand">
 
-    
+
+  
 
 
 <div class="post-block">
   
   
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
     <link itemprop="mainEntityOfPage" href="http://zhuyinna.github.io/2024/04/26/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E9%9D%A2%E8%AF%95%E9%A2%98/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -315,13 +391,13 @@ mjx-container[display="true"] + br {
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Joys Blog">
+      <meta itemprop="name" content="机器学习面试题 | Joys Blog">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/04/26/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E9%9D%A2%E8%AF%95%E9%A2%98/" class="post-title-link" itemprop="url">机器学习面试题</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          机器学习面试题
+        </h1>
 
         <div class="post-meta-container">
           <div class="post-meta">
@@ -344,8 +420,7 @@ mjx-container[display="true"] + br {
     
     
     
-    <div class="post-body" itemprop="articleBody">
-          <p>[TOC]</p>
+    <div class="post-body" itemprop="articleBody"><p>[TOC]</p>
 <h1>一、机器学习相关</h1>
 <h2 id="1、基本概念">1、基本概念</h2>
 <ul>
@@ -3352,7 +3427,6 @@ $$</p>
 <p>（1）GPU内存限制</p>
 <p>（2）性能差；容易卡在局部极小值</p>
 
-      
     </div>
 
     
@@ -3360,290 +3434,18 @@ $$</p>
     
 
     <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
 
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://zhuyinna.github.io/2024/03/26/Cpp/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/%E5%A4%B4%E5%83%8F2.jpg">
-      <meta itemprop="name" content="Joy Zhu">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Joys Blog">
-      <meta itemprop="description" content="Record of life, work, study, and thoughts">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Joys Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/03/26/Cpp/" class="post-title-link" itemprop="url">C++学习</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2024-03-26 20:26:37" itemprop="dateCreated datePublished" datetime="2024-03-26T20:26:37+08:00">2024-03-26</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2024-03-27 14:24:25" itemprop="dateModified" datetime="2024-03-27T14:24:25+08:00">2024-03-27</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80/" itemprop="url" rel="index"><span itemprop="name">计算机语言</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80/C/" itemprop="url" rel="index"><span itemprop="name">C++</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>C++</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2024/03/26/Cpp/">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
-    </div>
 
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://zhuyinna.github.io/2024/03/26/latex%E8%AF%AD%E6%B3%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/%E5%A4%B4%E5%83%8F2.jpg">
-      <meta itemprop="name" content="Joy Zhu">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Joys Blog">
-      <meta itemprop="description" content="Record of life, work, study, and thoughts">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Joys Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/03/26/latex%E8%AF%AD%E6%B3%95/" class="post-title-link" itemprop="url">latex语法</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2024-03-26 01:41:05 / Modified: 19:27:15" itemprop="dateCreated datePublished" datetime="2024-03-26T01:41:05+08:00">2024-03-26</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">教程</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%95%99%E7%A8%8B/Latex/" itemprop="url" rel="index"><span itemprop="name">Latex</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>latex基本语法 & 常用模板(简历,论文)</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2024/03/26/latex%E8%AF%AD%E6%B3%95/">
-                Read more &raquo;
-              </a>
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2024/03/26/Cpp/" rel="prev" title="C++学习">
+                  <i class="fa fa-angle-left"></i> C++学习
+                </a>
             </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://zhuyinna.github.io/2024/03/25/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0CV%E7%AE%97%E6%B3%95%E5%85%AB%E8%82%A1%E6%96%87/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/%E5%A4%B4%E5%83%8F2.jpg">
-      <meta itemprop="name" content="Joy Zhu">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Joys Blog">
-      <meta itemprop="description" content="Record of life, work, study, and thoughts">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Joys Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/03/25/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0CV%E7%AE%97%E6%B3%95%E5%85%AB%E8%82%A1%E6%96%87/" class="post-title-link" itemprop="url">深度学习CV算法八股文</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2024-03-25 10:55:45" itemprop="dateCreated datePublished" datetime="2024-03-25T10:55:45+08:00">2024-03-25</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2024-03-26 00:40:42" itemprop="dateModified" datetime="2024-03-26T00:40:42+08:00">2024-03-26</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/CV%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">CV算法</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>过/欠拟合 &amp; 梯度消失/爆炸 &amp; 权重初始化 &amp; 梯度下降法 &amp;学习率 &amp; 正则化 &amp; Batch Normalization…<br>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2024/03/25/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0CV%E7%AE%97%E6%B3%95%E5%85%AB%E8%82%A1%E6%96%87/#more" rel="contents">
-                Read more &raquo;
-              </a>
+            <div class="post-nav-item">
             </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
+          </div>
     </footer>
   </article>
 </div>
@@ -3651,585 +3453,7 @@ $$</p>
 
 
 
-    
 
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://zhuyinna.github.io/2024/03/24/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/%E5%A4%B4%E5%83%8F2.jpg">
-      <meta itemprop="name" content="Joy Zhu">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Joys Blog">
-      <meta itemprop="description" content="Record of life, work, study, and thoughts">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Joys Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/03/24/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/" class="post-title-link" itemprop="url">背包问题</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2024-03-24 20:42:00" itemprop="dateCreated datePublished" datetime="2024-03-24T20:42:00+08:00">2024-03-24</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2024-03-25 13:20:05" itemprop="dateModified" datetime="2024-03-25T13:20:05+08:00">2024-03-25</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%AE%97%E6%B3%95%E5%90%88%E9%9B%86/" itemprop="url" rel="index"><span itemprop="name">算法合集</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%AE%97%E6%B3%95%E5%90%88%E9%9B%86/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" itemprop="url" rel="index"><span itemprop="name">动态规划</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>代码随想录 - 动态规划学习笔记</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2024/03/24/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://zhuyinna.github.io/2024/03/24/Python%E5%AD%A6%E4%B9%A0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/%E5%A4%B4%E5%83%8F2.jpg">
-      <meta itemprop="name" content="Joy Zhu">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Joys Blog">
-      <meta itemprop="description" content="Record of life, work, study, and thoughts">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Joys Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/03/24/Python%E5%AD%A6%E4%B9%A0/" class="post-title-link" itemprop="url">Python学习</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2024-03-24 20:00:44" itemprop="dateCreated datePublished" datetime="2024-03-24T20:00:44+08:00">2024-03-24</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2024-03-26 22:34:09" itemprop="dateModified" datetime="2024-03-26T22:34:09+08:00">2024-03-26</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80/" itemprop="url" rel="index"><span itemprop="name">计算机语言</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>python语法遇到的问题记录</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2024/03/24/Python%E5%AD%A6%E4%B9%A0/">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://zhuyinna.github.io/2024/03/24/%E4%BA%8C%E5%8F%89%E6%A0%91/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/%E5%A4%B4%E5%83%8F2.jpg">
-      <meta itemprop="name" content="Joy Zhu">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Joys Blog">
-      <meta itemprop="description" content="Record of life, work, study, and thoughts">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Joys Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/03/24/%E4%BA%8C%E5%8F%89%E6%A0%91/" class="post-title-link" itemprop="url">二叉树</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2024-03-24 15:10:55 / Modified: 20:51:09" itemprop="dateCreated datePublished" datetime="2024-03-24T15:10:55+08:00">2024-03-24</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" itemprop="url" rel="index"><span itemprop="name">数据结构</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E4%BA%8C%E5%8F%89%E6%A0%91/" itemprop="url" rel="index"><span itemprop="name">二叉树</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>二叉树的基本概念 & 二叉树的种类 & 二叉树的遍历 & 二叉树的应用</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2024/03/24/%E4%BA%8C%E5%8F%89%E6%A0%91/">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://zhuyinna.github.io/2024/03/24/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/%E5%A4%B4%E5%83%8F2.jpg">
-      <meta itemprop="name" content="Joy Zhu">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Joys Blog">
-      <meta itemprop="description" content="Record of life, work, study, and thoughts">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Joys Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/03/24/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80/" class="post-title-link" itemprop="url">动态规划理论基础</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2024-03-24 03:24:54" itemprop="dateCreated datePublished" datetime="2024-03-24T03:24:54+08:00">2024-03-24</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2024-03-25 13:20:13" itemprop="dateModified" datetime="2024-03-25T13:20:13+08:00">2024-03-25</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%AE%97%E6%B3%95%E5%90%88%E9%9B%86/" itemprop="url" rel="index"><span itemprop="name">算法合集</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%AE%97%E6%B3%95%E5%90%88%E9%9B%86/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" itemprop="url" rel="index"><span itemprop="name">动态规划</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>代码随想录 - 动态规划学习笔记</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2024/03/24/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80/">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://zhuyinna.github.io/2024/03/24/%E6%89%B9%E5%A4%84%E7%90%86%E6%96%87%E4%BB%B6%E7%BC%96%E5%86%99/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/%E5%A4%B4%E5%83%8F2.jpg">
-      <meta itemprop="name" content="Joy Zhu">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Joys Blog">
-      <meta itemprop="description" content="Record of life, work, study, and thoughts">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Joys Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/03/24/%E6%89%B9%E5%A4%84%E7%90%86%E6%96%87%E4%BB%B6%E7%BC%96%E5%86%99/" class="post-title-link" itemprop="url">批处理文件编写</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2024-03-24 03:07:34 / Modified: 20:50:55" itemprop="dateCreated datePublished" datetime="2024-03-24T03:07:34+08:00">2024-03-24</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">教程</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%95%99%E7%A8%8B/Bat%E8%84%9A%E6%9C%AC/" itemprop="url" rel="index"><span itemprop="name">Bat脚本</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>批处理文件教程 & 常用用例</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2024/03/24/%E6%89%B9%E5%A4%84%E7%90%86%E6%96%87%E4%BB%B6%E7%BC%96%E5%86%99/">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://zhuyinna.github.io/2024/03/23/hexo%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/%E5%A4%B4%E5%83%8F2.jpg">
-      <meta itemprop="name" content="Joy Zhu">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Joys Blog">
-      <meta itemprop="description" content="Record of life, work, study, and thoughts">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Joys Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/03/23/hexo%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" class="post-title-link" itemprop="url">hexo基本语法</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2024-03-23 15:17:37" itemprop="dateCreated datePublished" datetime="2024-03-23T15:17:37+08:00">2024-03-23</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2024-03-26 22:39:19" itemprop="dateModified" datetime="2024-03-26T22:39:19+08:00">2024-03-26</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">教程</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%95%99%E7%A8%8B/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>hexo基本命令 & 常用语法</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2024/03/23/hexo%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" title="Next page" aria-label="Next page" href="/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
 
 </div>
   </main>
